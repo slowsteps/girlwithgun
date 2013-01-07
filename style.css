@@ -1,0 +1,363 @@
+/*   
+Theme Name: Girlwithgun
+Theme URI: http://www.girlwithgun.com/
+Description: wungi themeset for gaming portals girlwithgun and sohorses
+Author: Peter Hofstede
+Author URI: http://www.girlwithgun.com
+Version: 1.0.0
+Tags: custom-header, theme-options, fixed-width, flexible-width, threaded-comments, two-columns, white, light
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+*{
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+body {
+	background-color: rgb(250,245,240);
+	font:15px arial,sans-serif;	
+}
+
+#centerdiv {
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	padding-top:20px;
+	padding-left:20px;
+	width:1010px;
+	background-color:darkgrey;
+	border-radius: 15px;
+}
+
+
+h1 {
+ font:bold, 24px arial,sans-serif;
+ color: white;
+ margin-bottom: 4px;
+}
+
+
+h2 {
+ font:12px verdana,sans-serif;
+ margin-bottom: 10px; 
+}
+
+a:link, a:hover, a:visited {
+	color: black;
+	text-decoration:none;
+}
+
+.page-title {
+ background-color:grey;
+ color:#666666;
+}
+
+
+
+
+/*
+Single post
+*/
+
+#midcol {
+	background-color: rgb(210,210,230);
+	float:left;
+	padding: 10px;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 20px;
+	border-radius: 15px;
+}
+
+#rightcol {
+	float:left;
+	padding-left:0px;
+	margin-top: 0px;
+}
+
+#centergame {
+	text-align:center;
+	background-color: rgb(150,150,180);
+	margin: auto;
+	padding:0%;
+}
+
+h2.singlepostheader, h2.archiveheader {
+	 font:bold 24px arial;
+}
+
+
+/*category and tag buttons*/
+
+#relatedcol {
+	float:left;
+	padding-left:0px;
+	padding-top:0px;
+	width:135px;
+	height:460px;
+}
+
+.tagbutton {
+	background-color: #25b516;
+	padding:4px;
+	border-radius:4px;
+	margin-left:6px;
+}
+
+
+.categorybutton {
+	background-color: #25b516;
+	padding:4px;
+	border-radius:4px;
+	margin-left:6px;
+}
+
+.tagbutton:hover {
+	background-color: #60CC16;
+}
+
+.categorybutton:hover {
+	background-color: #60CC16;
+}
+
+
+.tagbutton a:visited, .tagbutton a:link {
+	color:white;
+}
+
+.categorybutton a:visited, .categorybutton a:link {
+	color:white;
+}
+
+
+/*header and footer*/
+
+#header {
+	display: block;
+	clear:both;
+	margin-bottom:20px;
+	height:80px;
+}
+
+#headerimg {
+	width:250px;
+	float: left;
+	background-color: #25b516;
+	background-image: url('logo.png');
+	border-radius: 8px;
+	margin-top:0px;
+	padding: 6px;
+	margin-right:20px;
+	
+}
+
+#headerimg:hover {
+	background-color: #0ee127;
+}
+
+.description {
+ font:italic, 12px arial,sans-serif;
+ color: white;
+ 
+}
+
+#footer {
+	display: block;
+	clear:both;
+	padding:10px;
+	margin-top:0px;
+	margin-left:0px;
+}
+
+/*searchform*/
+
+#searchformbox {
+	margin-top:20px;
+	margin-left:20px;
+	float: left;
+}	
+
+#s {
+	height:30px;
+	width: 400px;
+	border-radius:5px;
+	border: 2px solid #25b516;
+	padding: 4px;
+	font: bold 16px arial;
+}
+
+#searchsubmit {
+	height:30px;
+	width:60px;
+	margin-left:6px;
+	border-radius:5px;
+	color: white;
+	background-color: #25b516;
+	border: 2px solid #25b516;
+}
+
+/*
+	POST
+*/
+.clear { clear: both;}
+
+.post {
+	border: 0px solid white;
+	background-color: rgb(210,210,230);
+	padding:5px;
+	float:left;
+	text-align:center;
+	border-radius: 10px;
+	margin-right:15px;
+	margin-bottom:15px;
+	box-shadow: 2px 2px 4px #555;
+}
+
+.post:hover {
+	background-color: rgb(220,220,240)
+}
+
+
+.post .content .under {
+	line-height:16px;
+	float:left;
+}
+.post .content .under span {
+	float:left;
+	margin-right:15px;
+}
+
+.postpages {
+	float:left;
+}
+
+.thumbnail {
+	border: 0px solid white;
+	position: relative;	
+}
+
+.thumbnail img {
+	border-radius: 4px;
+}
+
+.overlayshadow {
+    background-color: black;
+    opacity: 0.7;
+    width: 100%;
+    position: absolute;
+    bottom:  0px;
+    left: 0;
+    z-index: 10;
+    border-bottom-left-radius:4px;
+    border-bottom-right-radius:4px;
+    
+}
+
+.overlaytext {
+	color:white;
+	font-size:12px;
+	opacity: 1.0;
+	z-index: 9;
+}
+
+.storycontent {
+	/*float:left;*/
+}
+
+body {
+	margin-left:20px;
+}
+
+p 
+{
+	margin: 10px 0 10px 0;
+}
+
+.post ul
+{
+	padding: 0;
+	margin: 5px 0 5px 0;
+}
+.post ul li
+{
+	list-style:square;
+	margin:0 0 0 30px;
+	padding: 0;
+}
+
+dt {
+	font-weight:bold;
+}
+dd {
+	margin:2px 0 2px 10px;
+}
+
+li 
+{
+	margin-left:30px;
+}
+
+
+
+
+/* ALIGN */
+.aligncenter,
+div.aligncenter {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.alignleft {
+   float: left;
+  margin-right:7px;
+}
+
+.alignright {
+   float: right;
+  margin-left:7px;
+}
+/*
+	required styles
+	Please see options/css.php for real definition of the styles
+*/
+.wp-caption,
+.wp-caption-text,
+.gallery-caption,
+.bypostauthor,
+.sticky
+{}
+
+#commentform .comment-form-comment label
+{
+	display:block;
+}
+.form-allowed-tags
+{
+	padding: 0 20px 0 0;
+}
+#cyan-sidebar
+{
+	overflow:hidden;
+}
+.archive-meta {
+	padding: 5px 10px;
+}
+.post a.special
+{
+	color:#ee0000;
+	text-decoration:none;
+}
+.post a.special:visited
+{
+	color:#ee0000;
+	text-decoration:none;
+}
+.post a.special:hover
+{
+	color:#000000;
+	text-decoration:underline;
+}
