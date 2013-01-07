@@ -38,6 +38,8 @@ if ( empty($withcomments) && !is_single() ) {
 <?php wp_head(); ?>
 
 
+
+
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -81,6 +83,8 @@ function hidethumbnailTitle(thumb) {
 
 </head>
 <body <?php body_class(); ?>>
+
+
 <div id="centerdiv">
 
 

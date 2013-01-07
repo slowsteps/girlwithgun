@@ -14,6 +14,9 @@ the_post();
 
 
 <div id="relatedcol">
+
+<H1>More games</H1>
+
 <div id="related">
 <?php
 $args = array( 'numberposts' => 4, 'order'=> 'DESC', 'orderby' => 'date' );
