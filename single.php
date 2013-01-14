@@ -19,7 +19,7 @@
 
 <div id="midcol">
 	<?php 
-		/*
+		
 		the_title("<h2 class=\"singlepostheader\">","</h2>");
 		//uncomment if you want to display text entered in the post editor
 		//the_content();
@@ -32,9 +32,9 @@
 
 		wp_reset_postdata();
 		//fetch the swf file that is attached (bound) to the post
-	    $args = array( 'post_type' => 'attachment', 'post_parent' => $post->ID,  'post_mime_type' => 'application/x-shockwave-flash', 'numberposts' => 1  ); 
-    	$attachment = get_posts($args)[0];
-		*/
+	    //$args = array( 'post_type' => 'attachment', 'post_parent' => $post->ID,  'post_mime_type' => 'application/x-shockwave-flash', 'numberposts' => 1  ); 
+    	//$attachment = get_posts($args)[0];
+		
 	?>
 	
 	<script type="text/javascript">	
