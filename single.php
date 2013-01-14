@@ -32,8 +32,8 @@
 
 		wp_reset_postdata();
 		//fetch the swf file that is attached (bound) to the post
-	    //$args = array( 'post_type' => 'attachment', 'post_parent' => $post->ID,  'post_mime_type' => 'application/x-shockwave-flash', 'numberposts' => 1  ); 
-    	//$attachment = get_posts($args)[0];
+	    $args = array( 'post_type' => 'attachment', 'post_parent' => $post->ID,  'post_mime_type' => 'application/x-shockwave-flash', 'numberposts' => 1  ); 
+    	$attachment = get_posts($args)[0];
 		
 	?>
 	
