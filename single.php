@@ -5,6 +5,7 @@
 <div id="relatedcol">
 	<div id="related">
 		<?php
+		/*
 		$args = array( 'numberposts' => 4, 'order'=> 'DESC', 'orderby' => 'date' );
 		$postslist = get_posts( $args );
 		$curpost = 0;
@@ -12,12 +13,13 @@
 			<?php include 'renderthumbnail.php'; ?>
 			<?php $curpost++; ?>
 		<?php endforeach; ?>
-		<?php wp_reset_postdata(); ?>
+		<?php wp_reset_postdata(); */?>
 	</div>
 </div>
 
 <div id="midcol">
 	<?php 
+		/*
 		the_title("<h2 class=\"singlepostheader\">","</h2>");
 		//uncomment if you want to display text entered in the post editor
 		//the_content();
@@ -32,16 +34,18 @@
 		//fetch the swf file that is attached (bound) to the post
 	    $args = array( 'post_type' => 'attachment', 'post_parent' => $post->ID,  'post_mime_type' => 'application/x-shockwave-flash', 'numberposts' => 1  ); 
     	$attachment = get_posts($args)[0];
+		*/
 	?>
 	
 	<script type="text/javascript">	
-    	<?php
+    	<?php /*
 			//get the width and height of the game from the editor custom fields
 			$customfieldwidth = get_post_custom_values('swf-width', $post->ID);
 			$gamewidth = $customfieldwidth[0];
 		
 			$customfieldheight = get_post_custom_values('swf-height', $post->ID);
 			$gameheight = $customfieldheight[0];
+       		*/
        	?>
 
     	var flashvars = {};
