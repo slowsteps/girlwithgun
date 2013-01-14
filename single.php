@@ -50,7 +50,7 @@
 		var params = { scale: "showAll" };
 
 		var attributes = {};    	
-    	swfobject.embedSWF("<?php echo $attachment->guid; ?>", "flashgame", "<?php echo $gamewidth;?>", "<?php echo $gameheight;?>", "11.0.0","expressInstall.swf", flashvars, params, attributes);
+    	//swfobject.embedSWF("<?php echo $attachment->guid; ?>", "flashgame", "<?php echo $gamewidth;?>", "<?php echo $gameheight;?>", "11.0.0","expressInstall.swf", flashvars, params, attributes);
     </script>
 
 	
@@ -62,21 +62,6 @@
 	
 	
 </div>
-
-
-<script type="text/javascript">
-	//var viewheight = $(window).height();
-	
-	//$("#centergame").height(viewheight-300);
-	//var aspectratio = <?php echo $gamewidth/$gameheight;?>;
-	//alert(aspectratio);
-	//$("#centergame").width(aspectratio*(viewheight-300));
-	//$("#midcol").width($(window).width()-400);
-	//$("#centerdiv").height(viewheight - 50);	
-	
-
-
-</script>
 
 
 <div id="rightcol">	
