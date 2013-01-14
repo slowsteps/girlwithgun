@@ -5,7 +5,7 @@
 <div id="relatedcol">
 	<div id="related">
 		<?php
-		/*
+		
 		$args = array( 'numberposts' => 4, 'order'=> 'DESC', 'orderby' => 'date' );
 		$postslist = get_posts( $args );
 		$curpost = 0;
@@ -13,7 +13,7 @@
 			<?php include 'renderthumbnail.php'; ?>
 			<?php $curpost++; ?>
 		<?php endforeach; ?>
-		<?php wp_reset_postdata(); */?>
+		<?php wp_reset_postdata(); ?>
 	</div>
 </div>
 
