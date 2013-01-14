@@ -33,19 +33,20 @@
 		wp_reset_postdata();
 		//fetch the swf file that is attached (bound) to the post
 	    $args = array( 'post_type' => 'attachment', 'post_parent' => $post->ID,  'post_mime_type' => 'application/x-shockwave-flash', 'numberposts' => 1  ); 
-    	$attachment = get_posts($args)[0];
-		
+    	$attachments = get_posts($args);
+		if ( count($attachments) > 0 ) $attachment = $attachments[0];
+		else echo "no attachments found";
 	?>
 	
 	<script type="text/javascript">	
-    	<?php /*
+    	<?php 
 			//get the width and height of the game from the editor custom fields
 			$customfieldwidth = get_post_custom_values('swf-width', $post->ID);
 			$gamewidth = $customfieldwidth[0];
 		
 			$customfieldheight = get_post_custom_values('swf-height', $post->ID);
 			$gameheight = $customfieldheight[0];
-       		*/
+       		
        	?>
 
     	var flashvars = {};
@@ -54,7 +55,7 @@
 		var params = { scale: "showAll" };
 
 		var attributes = {};    	
-    	//swfobject.embedSWF("<?php echo $attachment->guid; ?>", "flashgame", "<?php echo $gamewidth;?>", "<?php echo $gameheight;?>", "11.0.0","expressInstall.swf", flashvars, params, attributes);
+    	swfobject.embedSWF("<?php echo $attachment->guid; ?>", "flashgame", "<?php echo $gamewidth;?>", "<?php echo $gameheight;?>", "11.0.0","expressInstall.swf", flashvars, params, attributes);
     </script>
 
 	
