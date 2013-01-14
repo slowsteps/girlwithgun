@@ -3,7 +3,7 @@
 if ( function_exists( 'add_theme_support' ) ) { 
   add_theme_support( 'post-thumbnails' ); 
   //uncommment next line to hardwire wp admin setting for featured image size
-  //set_post_thumbnail_size( 100, 75 );
+  set_post_thumbnail_size( 100, 75 );
 }
 
 add_action('publish_page', 'add_custom_field_automatically');

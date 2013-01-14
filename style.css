@@ -70,6 +70,16 @@ Single post
 	margin-top: 0px;
 	margin-right: 20px;
 	border-radius: 15px;
+	width:80%;
+	
+}
+
+#centergame {
+	border: solid grey	2px;
+	background-color: #444444;
+	margin: auto;
+	margin-top: 10px;
+	text-align: center;
 }
 
 #rightcol {
@@ -78,15 +88,11 @@ Single post
 	margin-top: 0px;
 }
 
-#centergame {
-	text-align:center;
-	background-color: rgb(150,150,180);
-	margin: auto;
-	padding:0%;
-}
 
 h2.singlepostheader, h2.archiveheader {
 	 font:bold 24px arial;
+	 float:left;
+	 margin-right: 20px;
 }
 
 
@@ -98,6 +104,12 @@ h2.singlepostheader, h2.archiveheader {
 	padding-top:0px;
 	width:135px;
 	height:460px;
+}
+
+#categoryandtags {
+
+	padding:5px;
+
 }
 
 .tagbutton {
@@ -165,11 +177,18 @@ h2.singlepostheader, h2.archiveheader {
 }
 
 #footer {
-	display: block;
+	
 	clear:both;
 	padding:10px;
 	margin-top:0px;
 	margin-left:0px;
+	color:white	;
+	opacity: 0.5;
+	text-align: center;
+}
+
+#footer a {
+	color:white;
 }
 
 /*searchform*/

@@ -1,69 +1,40 @@
-<?php 
-get_header();
-the_post();
-?>
+<?php get_header();?>
 
-<style>
-
-#ccenterdiv {
-	width: 90%;
-	padding-right:10px;
-}
-
-</style>
 
 
 <div id="relatedcol">
-
-<H1>More games</H1>
-
-<div id="related">
-<?php
-$args = array( 'numberposts' => 4, 'order'=> 'DESC', 'orderby' => 'date' );
-$postslist = get_posts( $args );
-
-$curpost = 0;
-foreach ($postslist as $post) :  setup_postdata($post); ?>	
-		
-<?php include 'renderthumbnail.php'; ?>
-<?php $curpost++; ?>
-	
-<?php endforeach; ?>
-
-<?php
-//reset the current post counter for the main game post 
-wp_reset_postdata(); 
-?>
-</div>
+	<div id="related">
+		<?php
+		$args = array( 'numberposts' => 4, 'order'=> 'DESC', 'orderby' => 'date' );
+		$postslist = get_posts( $args );
+		$curpost = 0;
+		foreach ($postslist as $post) :  setup_postdata($post); ?>	
+			<?php include 'renderthumbnail.php'; ?>
+			<?php $curpost++; ?>
+		<?php endforeach; ?>
+		<?php wp_reset_postdata(); ?>
+	</div>
 </div>
 
 <div id="midcol">
 	<?php 
 		the_title("<h2 class=\"singlepostheader\">","</h2>");
-		the_content();
-		echo "<span class =\"categorybutton\">";
-		the_category(' '); 
-		echo "</span>";
-		the_tags("<span class=\"tagbutton\"  onclick=\"_gaq.push(['_trackEvent', 'tag', 'clicked'])\"   >","</span><span onclick=\"_gaq.push(['_trackEvent', 'tag', 'clicked'])\" class=\"tagbutton\">","</span>");	
-
+		//uncomment if you want to display text entered in the post editor
+		//the_content();
+		echo "<div id=\"categoryandtags\">";
+			echo "<span class =\"categorybutton\">";
+			the_category(' '); 
+			echo "</span>";
+			the_tags("<span class=\"tagbutton\"  onclick=\"_gaq.push(['_trackEvent', 'tag', 'clicked'])\"   >","</span><span onclick=\"_gaq.push(['_trackEvent', 'tag', 'clicked'])\" class=\"tagbutton\">","</span>");	
+		echo "</div>";	
 
 		wp_reset_postdata();
-
+		//fetch the swf file that is attached (bound) to the post
 	    $args = array( 'post_type' => 'attachment', 'post_parent' => $post->ID,  'post_mime_type' => 'application/x-shockwave-flash', 'numberposts' => 1  ); 
-   	 	$attachments = get_posts($args);
-    	if ($attachments) {
-            foreach ( $attachments as $attachment ) {  
-                //echo $attachment->guid;
-            }
-    	}
-    	else echo "no attachments";
-
-		
-
+    	$attachment = get_posts($args)[0];
 	?>
 	
-	<script type="text/javascript">
-    	
+	<script type="text/javascript">	
     	<?php
 			//get the width and height of the game from the editor custom fields
 			$customfieldwidth = get_post_custom_values('swf-width', $post->ID);
@@ -71,33 +42,41 @@ wp_reset_postdata();
 		
 			$customfieldheight = get_post_custom_values('swf-height', $post->ID);
 			$gameheight = $customfieldheight[0];
-    		
-    		$scaledwidth = 800;
-    		$scaledheight = $scaledwidth*$gameheight/$gamewidth;
-    		
-    	?>
-    	
+       	?>
 
     	var flashvars = {};
-		var params = { scale: "exactFit" };
-		var attributes = {};
+		//var params = { scale: "exactfit" };
+		//var params = { scale: "noscale" };
+		var params = { scale: "showAll" };
 
-    	
-    	swfobject.embedSWF("<?php echo $attachment->guid; ?>", "flashgame", "<?php echo $scaledwidth;?>", "<?php echo $scaledheight;?>", "11.0.0","expressInstall.swf", flashvars, params, attributes);
- 		 
-    
+		var attributes = {};    	
+    	swfobject.embedSWF("<?php echo $attachment->guid; ?>", "flashgame", "<?php echo $gamewidth;?>", "<?php echo $gameheight;?>", "11.0.0","expressInstall.swf", flashvars, params, attributes);
     </script>
 
-	<p>
+	
 	<div id="centergame">
 		<div id="flashgame">
       		Alternative content - swfobject flash container div
     	</div>
     </div>
-	</p>
+	
 	
 </div>
 
+
+<script type="text/javascript">
+	//var viewheight = $(window).height();
+	
+	//$("#centergame").height(viewheight-300);
+	//var aspectratio = <?php echo $gamewidth/$gameheight;?>;
+	//alert(aspectratio);
+	//$("#centergame").width(aspectratio*(viewheight-300));
+	//$("#midcol").width($(window).width()-400);
+	//$("#centerdiv").height(viewheight - 50);	
+	
+
+
+</script>
 
 
 <div id="rightcol">	
