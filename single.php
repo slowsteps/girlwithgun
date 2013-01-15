@@ -23,7 +23,8 @@
 				$curcat = the_category_ID(false);
 				$args = array(
 								'title_li'=> __( '' ),
-								'current_category' => $curcat
+								'current_category' => $curcat,
+								'number' => 10
 						);
 	
 				wp_list_categories($args); 

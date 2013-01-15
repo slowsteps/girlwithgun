@@ -114,12 +114,13 @@ h2.archiveheader {
 	margin-left: 10px;
 	clear:both;
 	color:white;
+	font-size: 14px;
 }
 
 li a:link, li a:visited {
 	text-transform:capitalize;
 	color:white;
-	line-height: 30px;
+	line-height: 25px;
 }
 
  li.current-cat, li.current-cat a:link, li.current-cat a:visited { 
