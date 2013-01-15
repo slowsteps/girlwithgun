@@ -1,0 +1,124 @@
+/*   
+sohorses.com CSS overrides
+*/
+
+
+
+body {
+	background-color: rgb(250,245,240);
+	font:15px 'Merriweather',serif;	
+}
+
+#centerdiv {
+	background-color:#776644;
+}
+
+
+
+a:link, a:hover, a:visited {
+	color: black;
+}
+
+
+/*
+Single post
+*/
+
+#midcol {
+	background-color: floralwhite;
+}
+
+#centergame {
+	border: solid #2D2D2D 2px;
+	background-color: 	#2D2D2D;
+}
+
+h2.singlepostheader {
+	color:#441111;
+}
+
+h2.archiveheader {
+	color:floralwhite;
+}
+
+
+/*category and tag buttons*/
+
+.tagbutton {
+	background-color: hotpink;
+
+}
+
+
+.categorybutton {
+	background-color: hotpink;
+	padding:4px;
+	border-radius:4px;
+	margin-left:6px;
+}
+
+.tagbutton:hover {
+	background-color: deeppink;
+}
+
+.categorybutton:hover {
+	background-color: deeppink;
+}
+
+
+.tagbutton a:visited, .tagbutton a:link {
+	color:white;
+}
+
+.categorybutton a:visited, .categorybutton a:link {
+	color:white;
+}
+
+
+/*header and footer*/
+
+#headerimg {
+	background-color: deeppink;
+	background-image: url('zlogo.png');
+}
+
+#headerimg:hover {
+	background-color: hotpink;
+}
+
+
+#s {
+	border: 2px solid hotpink;
+	background-color:floralwhite;
+}
+
+#searchsubmit {
+	font-size: 14px;
+	font-family: 'Merriweather',serif;
+	color: white;
+	background-color: hotpink;
+}
+
+#searchsubmit:hover {
+	background-color: deeppink;
+}
+
+/*
+	POST
+*/
+
+
+.post {
+	background-color: floralwhite;
+}
+
+.post:hover {
+	background-color: hotpink;
+}
+
+
+
+
+
+
+
