@@ -37,7 +37,7 @@ h2.singlepostheader {
 	color:#441111;
 }
 
-h2.archiveheader {
+h2.archiveheader, h2.archiveheader a:link, h2.archiveheader a:visited {
 	color:floralwhite;
 }
 
