@@ -68,7 +68,7 @@ Three colum layout for game pages and general pages
 }
 
 #centergame {
-	border: solid grey	0px;
+	border: solid #444444	2px;
 	background-color: #444444;
 	margin: auto;
 	margin-top: 10px;
@@ -104,6 +104,27 @@ h2.archiveheader {
 	width:135px;
 	height:460px;
 }
+
+
+
+/* category navigation menu */
+
+#categories {
+	padding:10px;
+	margin-left: 10px;
+	clear:both;
+	color:white;
+}
+
+li a:link, li a:visited {
+	text-transform:capitalize;
+	color:white;
+	line-height: 30px;
+}
+
+ li.current-cat, li.current-cat a:link, li.current-cat a:visited { 
+ 	text-decoration: underline;
+ }
 
 #categoryandtags {
 
@@ -218,7 +239,7 @@ h2.archiveheader {
 }
 
 /*
-	POST
+	thumbnails on homepage and related column
 */
 .clear { clear: both;}
 
@@ -280,34 +301,10 @@ h2.archiveheader {
 	z-index: 9;
 }
 
-.storycontent {
-	/*float:left;*/
-}
 
 
-.post ul
-{
-	padding: 0;
-	margin: 5px 0 5px 0;
-}
-.post ul li
-{
-	list-style:square;
-	margin:0 0 0 30px;
-	padding: 0;
-}
 
-dt {
-	font-weight:bold;
-}
-dd {
-	margin:2px 0 2px 10px;
-}
 
-li 
-{
-	margin-left:30px;
-}
 
 
 

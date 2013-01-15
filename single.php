@@ -14,6 +14,22 @@
 			<?php $curpost++; ?>
 		<?php endforeach; ?>
 		<?php wp_reset_postdata(); ?>
+		
+	</div>
+	<div id="categories">
+		<ul>
+			<?php
+				//vertical navigation of categories 
+				$curcat = the_category_ID(false);
+				$args = array(
+								'title_li'=> __( '' ),
+								'current_category' => $curcat
+						);
+	
+				wp_list_categories($args); 
+				
+			?> 
+		</ul>
 	</div>
 </div>
 
@@ -24,10 +40,10 @@
 		//uncomment if you want to display text entered in the post editor
 		//the_content();
 		echo "<div id=\"categoryandtags\">";
-			echo "<span class =\"categorybutton\">";
-			the_category(' '); 
-			echo "</span>";
-			the_tags("<span class=\"tagbutton\"  onclick=\"_gaq.push(['_trackEvent', 'tag', 'clicked'])\"   >","</span><span onclick=\"_gaq.push(['_trackEvent', 'tag', 'clicked'])\" class=\"tagbutton\">","</span>");	
+			//echo "<span class =\"categorybutton\">";
+			//the_category(' '); 
+			//echo "</span>";
+			the_tags("More games with: <span class=\"tagbutton\"  onclick=\"_gaq.push(['_trackEvent', 'tag', 'clicked'])\"   >","</span><span onclick=\"_gaq.push(['_trackEvent', 'tag', 'clicked'])\" class=\"tagbutton\">","</span>");	
 		echo "</div>";	
 
 		wp_reset_postdata();
