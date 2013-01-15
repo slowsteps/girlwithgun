@@ -6,7 +6,7 @@
 	<div id="related">
 		<?php
 		
-		$args = array( 'numberposts' => 4, 'order'=> 'DESC', 'orderby' => 'date' );
+		$args = array( 'numberposts' => 3, 'order'=> 'DESC', 'orderby' => 'date' );
 		$postslist = get_posts( $args );
 		$curpost = 0;
 		foreach ($postslist as $post) :  setup_postdata($post); ?>	
