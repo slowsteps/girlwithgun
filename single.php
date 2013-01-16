@@ -4,47 +4,48 @@
 
 <div id="relatedcol">
 	<div id="related">
+		<h2>Popular</h2>
 		<?php
-		
-		$args = array( 'numberposts' => 3, 'order'=> 'DESC', 'orderby' => 'date' );
-		$postslist = get_posts( $args );
-		$curpost = 0;
-		foreach ($postslist as $post) :  setup_postdata($post); ?>	
-			<?php include 'renderthumbnail.php'; ?>
-			<?php $curpost++; ?>
-		<?php endforeach; ?>
-		<?php wp_reset_postdata(); ?>
-		
+			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value', 'order' => 'DESC','numberposts' => 3 );
+			$postslist = get_posts( $args );
+			$curpost = 0;
+			foreach ($postslist as $post) :  
+				setup_postdata($post); 
+				include 'renderthumbnail.php';
+				$curpost++; 
+			endforeach;
+			wp_reset_postdata(); 
+		?>
+
+		<h2>New</h2>
+		<?php
+			$args = array('orderby' => 'post_date', 'order' => 'DESC','numberposts' => 1 );
+			$postslist = get_posts( $args );
+			//$curpost = 0;
+			foreach ($postslist as $post) :  
+				setup_postdata($post); 
+				include 'renderthumbnail.php';
+				$curpost++; 
+			endforeach;
+			wp_reset_postdata(); 
+		?>
 	</div>
-	<div id="categories">
-		<ul>
-			<?php
-				//vertical navigation of categories 
-				$curcat = the_category_ID(false);
-				$args = array(
-								'title_li'=> __( '' ),
-								'current_category' => $curcat,
-								'number' => 10
-						);
 	
-				wp_list_categories($args); 
-				
-			?> 
-		</ul>
-	</div>
 </div>
 
 <div id="midcol">
 	<?php 
-		
+		setPostViews($post->ID);
 		the_title("<h2 class=\"singlepostheader\">","</h2>");
 		//uncomment if you want to display text entered in the post editor
 		//the_content();
 		echo "<div id=\"categoryandtags\">";
-			//echo "<span class =\"categorybutton\">";
-			//the_category(' '); 
-			//echo "</span>";
-			the_tags("More games with: <span class=\"tagbutton\"  onclick=\"_gaq.push(['_trackEvent', 'tag', 'clicked'])\"   >","</span><span onclick=\"_gaq.push(['_trackEvent', 'tag', 'clicked'])\" class=\"tagbutton\">","</span>");	
+			echo "More games with: ";
+			echo "<span class =\"categorybutton\">";
+			
+			the_category(' '); 
+			echo "</span>";
+			the_tags("<span class=\"tagbutton\"  onclick=\"_gaq.push(['_trackEvent', 'tag', 'clicked'])\"   >","</span><span onclick=\"_gaq.push(['_trackEvent', 'tag', 'clicked'])\" class=\"tagbutton\">","</span>");	
 		echo "</div>";	
 
 		wp_reset_postdata();

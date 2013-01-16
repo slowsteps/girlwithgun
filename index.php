@@ -9,7 +9,7 @@
  
  <?php if ( is_home() ) {
  		//query for "games" cat? cat games is gone and this still works?	
-		query_posts($query_string . 'games');
+		//query_posts($query_string . 'games');
 		
 	}
 	if (is_category()) {
@@ -32,27 +32,18 @@
  
   <!-- Start the Loop. -->
  
+		<?php
+			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value', 'order' => 'DESC','numberposts' => 35 );
+			$postslist = get_posts( $args );
+			$curpost = 0;
+			foreach ($postslist as $post) :  
+				setup_postdata($post); 
+				include 'renderthumbnail.php';
+				$curpost++; 
+			endforeach;
+			wp_reset_postdata(); 
+		?>
 
- 
- <?php
- $maxposts = 35;
- $curpost = 0;
- ?>
- 
- 
- <?php if ( have_posts() ) : while ( have_posts() and $curpost++ < $maxposts ) : the_post(); ?>
- 
- 
-<?php include 'renderthumbnail.php'; ?>
 
- <!-- Stop The Loop (but note the "else:" - see next line). -->
- <?php endwhile; else: ?>
 
- <!-- The very first "if" tested to see if there were any Posts to -->
- <!-- display.  This "else" part tells what do if there weren't any. -->
- <p>Sorry, no posts matched your criteria.</p>
-
- <!-- REALLY stop The Loop. -->
-
- <?php endif; ?>
  <?php get_footer(); ?>

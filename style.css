@@ -302,7 +302,14 @@ li a:link, li a:visited {
 	z-index: 9;
 }
 
-
+.newgamelabel {
+	position: absolute;
+	background-color:deeppink;
+	color:floralwhite;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+}
 
 
 
