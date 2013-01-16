@@ -36,7 +36,7 @@
 			//sort by newest in case no view data is available (zero clicks) 
 			
 			//$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value', 'order' => 'DESC','numberposts' => 35 );
-			$args = array( 'orderby' => 'post_views_count', 'order' => 'ASC','numberposts' => 35 );
+			$args = array( 'orderby' => 'post_date', 'order' => 'ASC','numberposts' => 35 );
 
 			$postslist = get_posts( $args );
 			
