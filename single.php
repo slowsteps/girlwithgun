@@ -4,11 +4,14 @@
 
 <div id="relatedcol">
 	<div id="related">
-		<h2>Popular</h2>
+		
 		<?php
+			
+			$curpost = 0;
+
 			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value', 'order' => 'DESC','numberposts' => 3 );
 			$postslist = get_posts( $args );
-			$curpost = 0;
+			
 			foreach ($postslist as $post) :  
 				setup_postdata($post); 
 				include 'renderthumbnail.php';
@@ -17,11 +20,11 @@
 			wp_reset_postdata(); 
 		?>
 
-		<h2>New</h2>
+		
 		<?php
-			$args = array('orderby' => 'post_date', 'order' => 'DESC','numberposts' => 1 );
+			$args = array('orderby' => 'post_date', 'order' => 'DESC','numberposts' => 2 );
 			$postslist = get_posts( $args );
-			//$curpost = 0;
+			
 			foreach ($postslist as $post) :  
 				setup_postdata($post); 
 				include 'renderthumbnail.php';
