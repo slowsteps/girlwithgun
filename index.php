@@ -35,18 +35,23 @@
 		<?php
 			//sort by newest in case no view data is available (zero clicks) 
 			
-			//$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value', 'order' => 'DESC','numberposts' => 35 );
-			$args = array( 'orderby' => 'post_date', 'order' => 'ASC','numberposts' => 35 );
+			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value', 'order' => 'DESC','numberposts' => 35 );
+			//$args = array( 'orderby' => 'post_date', 'order' => 'ASC','numberposts' => 35 );
 
 			$postslist = get_posts( $args );
-			
+			//$mypost = $postslist[1];
+			//var_dump($mypost->post_views_count);
 			$curpost = 0;
 			foreach ($postslist as $post) :  
+				//echo $post->post_views_count;
 				setup_postdata($post); 
 				include 'renderthumbnail.php';
 				$curpost++; 
 			endforeach;
 			wp_reset_postdata(); 
+		
+
+
 		?>
 
 
