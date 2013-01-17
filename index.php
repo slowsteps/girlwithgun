@@ -35,7 +35,7 @@
 		<?php
 			//sort by newest in case no view data is available (zero clicks) 
 			
-			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value', 'order' => 'DESC','numberposts' => 35 );
+			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value', 'order' => 'DESC','numberposts' => 40 );
 			//$args = array( 'orderby' => 'post_date', 'order' => 'ASC','numberposts' => 35 );
 
 			$postslist = get_posts( $args );
@@ -50,7 +50,7 @@
 			endforeach;
 			wp_reset_postdata(); 
 		
-
+			//todo, duplicate the array, take the bottom 3 games out, replace by 3 new game inserted in random positions in the array
 
 		?>
 
