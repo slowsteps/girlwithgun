@@ -21,6 +21,7 @@ _deprecated_file( sprintf( __( 'Theme without %1$s' ), basename(__FILE__) ), '3.
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+
 <link rel="shortcut icon" href="/wp-content/themes/girlwithgun/sohorses.ico">
 <?php 
 

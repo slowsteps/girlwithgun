@@ -1,5 +1,5 @@
  
- 
+
  <style>
  
  .overlayshadow {
@@ -24,7 +24,6 @@
 		echo("</div>");
 		//rollover game title
 		echo "<div id=\"overlay".$curpost."\" class=\"overlayshadow\">";
-			//the_title("<div class=\"overlaytext\">"," ($post->post_views_count)</div>");
 			the_title("<div class=\"overlaytext\">","</div>");
 		echo "</div>";
 		//post that are younger than a week get a new label

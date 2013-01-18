@@ -41,6 +41,10 @@ h2.archiveheader, h2.archiveheader a:link, h2.archiveheader a:visited {
 	color:floralwhite;
 }
 
+.categorydescription {
+	color:floralwhite;
+	margin-bottom: 10px;
+}
 
 /*category and tag buttons*/
 

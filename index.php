@@ -7,16 +7,19 @@
  <?php get_header(); ?>
 
  
- <?php if ( is_home() ) {
- 		//query for "games" cat? cat games is gone and this still works?	
-		//query_posts($query_string . 'games');
-		
+ <?php 
+
+ 	//for CSS targetting
+ 	$curpost = 0;
+
+ 	if ( is_home() ) {
+ 		//
 	}
 	if (is_category()) {
 		echo "<h2 class=\"archiveheader\">";
-		the_category(' ');
+		echo get_the_category_by_ID( get_query_var('cat') );
 		echo "</h2>";
-		echo  category_description();
+		echo '<div class="categorydescription">'.category_description()."</div>";
 	}
 
 	if (is_tag()) {
@@ -26,20 +29,16 @@
 	}
 
 
- ?>
- 
- 
- 
-  <!-- render a grid of thumbnails. -->
- 
-
-  		<?php
-			//first get the newest games
-			$curpost = 0;
-  			//new games will be stored to prevent double rendering on homepage
-  			$visibleposts = array();
-  			//allow 10 new games to render
-			$args = array('orderby' => 'post_date', 'order' => 'DESC','numberposts' => 10 );
+	//render a grid of thumbnails.
+	
+		$curpost = 0;
+		//first get the newest games
+		
+		//new games will be stored to prevent double rendering on homepage
+		$visibleposts = array();
+		//on the homepage, render some new games before the popular games
+		if (is_home()) {
+			$args = array('orderby' => 'post_date', 'order' => 'DESC','numberposts' => 10);
 			$postslist = get_posts( $args );
 		
 			foreach ($postslist as $post) :  
@@ -54,28 +53,34 @@
 			endforeach;
 			//reset counter for the next loop
 			wp_reset_postdata(); 
-		?>
+		}
+	
 
+		if (is_home()) {
+			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value_num', 'order' => 'desc','numberposts' => 40);	
+		}
+		else if (is_category()){
+			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value_num', 'order' => 'desc','numberposts' => 40,'category' => get_query_var('cat') );
+		}
+		else if (is_tag()) {
+			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value_num', 'order' => 'desc','numberposts' => 40,'tag' => get_query_var('tag') );	
+		}
 
-
-		<?php
-			//secondly get the most popular games (alltime)
-			
-			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value_num', 'order' => 'desc','numberposts' => 40 );
-			$postslist = get_posts( $args );
-			
-			foreach ($postslist as $post) :  
-				//don't display when already visible as a new game
-				if ($visibleposts[$post->ID] == false) {
-					setup_postdata($post); 
-					include 'renderthumbnail.php';
-					$curpost++; 
-				}
-			endforeach;
-			wp_reset_postdata(); 
+		$postslist = get_posts( $args );
 		
+		foreach ($postslist as $post) :  
+			//don't display when already visible as a new game
+			if ($visibleposts[$post->ID] == false) {
+				setup_postdata($post); 
+				include 'renderthumbnail.php';
+				$curpost++; 
+			}
+		endforeach;
+		wp_reset_postdata(); 
+	
+	
 
-		?>
+?>
 
 
 
