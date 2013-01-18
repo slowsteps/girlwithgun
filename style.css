@@ -73,6 +73,12 @@ Three colum layout for game pages and general pages
 	margin: auto;
 	margin-top: 10px;
 	text-align: center;
+	min-height: 400px;
+}
+
+/* this div will be removed by swfobject */
+#flashgame {
+	color:orange;
 }
 
 #rightcol {
@@ -212,6 +218,11 @@ li a:link, li a:visited {
 	color:white;
 }
 
+#tagcloud {
+	margin-right: 40px;
+	margin-left: 130px;
+}
+
 /*searchform*/
 
 #searchformbox {
@@ -283,8 +294,9 @@ li a:link, li a:visited {
 }
 
 .overlayshadow {
-    background-color: black;
-    opacity: 0.7;
+	background-image: url('overlayshadow.png');
+    padding-top: 10px;
+    
     width: 100%;
     position: absolute;
     bottom:  0px;
@@ -297,7 +309,7 @@ li a:link, li a:visited {
 
 .overlaytext {
 	color:white;
-	font-size:12px;
+	font-size:11px;
 	opacity: 1.0;
 	z-index: 9;
 }

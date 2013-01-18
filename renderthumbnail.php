@@ -20,18 +20,18 @@
 		//the thumbnail image
 		echo("<div class=\"thumbimg\">");
 			the_post_thumbnail('thumbnail');
-			echo "<br/>count: " . $post->post_views_count;
+			//echo "<br/>count: " . $post->post_views_count;
 		echo("</div>");
 		//rollover game title
 		echo "<div id=\"overlay".$curpost."\" class=\"overlayshadow\">";
-			the_title("<div class=\"overlaytext\">","</div>");
+			the_title("<div class=\"overlaytext\">"," ($post->post_views_count)</div>");
 			
 		echo "</div>";
 		//post that are younger than a week get a new label
 		$post_age = round((date('U') -  get_the_date('U'))/86400);
 		if ($post_age<8) {
 			echo("<div class=\"newgamelabel\">");
-				echo "new " . $post_age;
+				echo "new ";
 			echo("</div>");
 		}
 	echo "</div>";

@@ -32,25 +32,48 @@
  
   <!-- Start the Loop. -->
  
-		<?php
-			//sort by newest in case no view data is available (zero clicks) 
-			
-			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value', 'order' => 'DESC','numberposts' => 40 );
-			//$args = array( 'orderby' => 'post_date', 'order' => 'ASC','numberposts' => 35 );
 
-			$postslist = get_posts( $args );
-			//$mypost = $postslist[1];
-			//var_dump($mypost->post_views_count);
+  		<?php
+			//first get the newest games
 			$curpost = 0;
+  			//new games will be stored to prevent double rendering on homepage
+  			$visibleposts = array();
+  			//allow 10 new games to render
+			$args = array('orderby' => 'post_date', 'order' => 'DESC','numberposts' => 10 );
+			$postslist = get_posts( $args );
+		
 			foreach ($postslist as $post) :  
-				//echo $post->post_views_count;
-				setup_postdata($post); 
-				include 'renderthumbnail.php';
-				$curpost++; 
+				//max 8 days old
+				$post_age = round((date('U') -  get_the_date('U'))/86400);
+				if ($post_age<8) {
+					$visibleposts[$post->ID] = true;
+					setup_postdata($post); 
+					include 'renderthumbnail.php';
+					$curpost++; 
+				}
+			endforeach;
+			//reset counter for the next loop
+			wp_reset_postdata(); 
+		?>
+
+
+
+		<?php
+			//secondly get the most popular games (alltime)
+			
+			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value_num', 'order' => 'desc','numberposts' => 40 );
+			$postslist = get_posts( $args );
+			
+			foreach ($postslist as $post) :  
+				//don't display when already visible as a new game
+				if ($visibleposts[$post->ID] == false) {
+					setup_postdata($post); 
+					include 'renderthumbnail.php';
+					$curpost++; 
+				}
 			endforeach;
 			wp_reset_postdata(); 
 		
-			//todo, duplicate the array, take the bottom 3 games out, replace by 3 new game inserted in random positions in the array
 
 		?>
 

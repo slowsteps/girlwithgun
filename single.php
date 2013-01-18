@@ -9,7 +9,7 @@
 			
 			$curpost = 0;
 
-			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value', 'order' => 'DESC','numberposts' => 3 );
+			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value_num', 'order' => 'DESC','numberposts' => 3 );
 			$postslist = get_posts( $args );
 			
 			foreach ($postslist as $post) :  
@@ -38,7 +38,9 @@
 
 <div id="midcol">
 	<?php 
+		//track this gameplay in a meta filed posts_views_count
 		setPostViews($post->ID);
+		
 		the_title("<h2 class=\"singlepostheader\">","</h2>");
 		//uncomment if you want to display text entered in the post editor
 		//the_content();
@@ -64,10 +66,10 @@
 			//get the width and height of the game from the editor custom fields
 			$customfieldwidth = get_post_custom_values('swf-width', $post->ID);
 			$gamewidth = $customfieldwidth[0];
-		
+			if ($gamewidth==0) $gamewidth=600;
 			$customfieldheight = get_post_custom_values('swf-height', $post->ID);
 			$gameheight = $customfieldheight[0];
-       		
+       		if ($gameheight==0) $gameheight=480;
        	?>
 
     	var flashvars = {};
@@ -82,7 +84,7 @@
 	
 	<div id="centergame">
 		<div id="flashgame">
-      		Alternative content - swfobject flash container div
+      		Flash game not loaded - you are offline, or the media attachement could not be found.
     	</div>
     </div>
 	
