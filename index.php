@@ -30,7 +30,7 @@
  
  
  
-  <!-- Start the Loop. -->
+  <!-- render a grid of thumbnails. -->
  
 
   		<?php

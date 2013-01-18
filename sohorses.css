@@ -74,12 +74,23 @@ h2.archiveheader, h2.archiveheader a:link, h2.archiveheader a:visited {
 	color:white;
 }
 
+#backbutton {
+	color:floralwhite;
+ 	background-image: url('backbuttongirlwithgun.png');
+ 	padding-left: 13px;
+ 	line-height: 29px;
+}
+
+#backbutton:hover {
+	background-image: url('backbuttongirlwithgunhover.png');
+}
+
 
 /*header and footer*/
 
 #headerimg {
 	background-color: deeppink;
-	background-image: url('zlogo.png');
+	background-image: url('sohorseslogo.png');
 }
 
 #headerimg:hover {

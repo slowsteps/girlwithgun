@@ -37,18 +37,22 @@
 </div>
 
 <div id="midcol">
+	
+	<a href="/"><div id="backbutton">home</div></a>
+
 	<?php 
 		//track this gameplay in a meta filed posts_views_count
 		setPostViews($post->ID);
-		
+
+
+
 		the_title("<h2 class=\"singlepostheader\">","</h2>");
 		//uncomment if you want to display text entered in the post editor
 		//the_content();
 		echo "<div id=\"categoryandtags\">";
 			echo "More games with: ";
-			echo "<span class =\"categorybutton\">";
-			
-			the_category(' '); 
+			echo "<span class =\"tagbutton\">";
+				the_category('</span><span class ="tagbutton">'); 
 			echo "</span>";
 			the_tags("<span class=\"tagbutton\"  onclick=\"_gaq.push(['_trackEvent', 'tag', 'clicked'])\"   >","</span><span onclick=\"_gaq.push(['_trackEvent', 'tag', 'clicked'])\" class=\"tagbutton\">","</span>");	
 		echo "</div>";	

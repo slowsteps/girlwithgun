@@ -100,6 +100,21 @@ h2.archiveheader {
 	 margin-right: 20px;
 }
 
+#backbutton {
+	color:white;
+ 	width: 60px;
+ 	height:27px;
+ 	background-image: url('backbuttongirlwithgun.png');
+ 	background-repeat: no-repeat;
+ 	float:left;
+ 	padding-left: 15px;
+ 	line-height: 20px;
+ 	margin-right:10px;
+}
+
+#backbutton:hover {
+	background-image: url('backbuttongirlwithgunhover.png');
+}
 
 /*category and tag buttons*/
 
@@ -123,19 +138,10 @@ h2.archiveheader {
 	font-size: 14px;
 }
 
-li a:link, li a:visited {
-	text-transform:capitalize;
-	color:white;
-	line-height: 25px;
-}
-
- li.current-cat, li.current-cat a:link, li.current-cat a:visited { 
- 	text-decoration: underline;
- }
-
 #categoryandtags {
 
 	padding:5px;
+	/*	line-height: 24px; */
 
 }
 
@@ -152,6 +158,7 @@ li a:link, li a:visited {
 	padding:4px;
 	border-radius:4px;
 	margin-left:6px;
+	margin-bottom: 40px;
 }
 
 .tagbutton:hover {
