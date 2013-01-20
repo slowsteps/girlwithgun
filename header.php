@@ -26,27 +26,10 @@ _deprecated_file( sprintf( __( 'Theme without %1$s' ), basename(__FILE__) ), '3.
 <?php 
 
 //add portal specific CSS overrides  
-
 if ( strtolower(get_bloginfo('name')) == "sohorses" ) echo '<link rel="stylesheet" href="/wp-content/themes/girlwithgun/sohorses.css" type="text/css" media="screen" />';
 
-
 ?>
 
-
-<style type="text/css" media="screen">
-
-<?php
-// Checks to see whether it needs a sidebar
-if ( empty($withcomments) && !is_single() ) {
-?>
-	#page { background: url("<?php bloginfo('stylesheet_directory'); ?>/images/kubrickbg-<?php bloginfo('text_direction'); ?>.jpg") repeat-y top; border: none; }
-<?php } else { // No sidebar ?>
-	#page { background: url("<?php bloginfo('stylesheet_directory'); ?>/images/kubrickbgwide.jpg") repeat-y top; border: none; }
-<?php } ?>
-
-</style>
-
-<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
 <?php wp_head(); ?>
 
@@ -59,8 +42,6 @@ if ( empty($withcomments) && !is_single() ) {
 ?>
 
 <script type="text/javascript">
-
-
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', '<?php echo $trackingid;?>']);
@@ -77,22 +58,22 @@ if ( empty($withcomments) && !is_single() ) {
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
+
+
 <script type="text/javascript">
 
-
+//used by renderthumbnail.php
 
 
 function showthumbnailTitle(thumb) {
 		
 		var shadow = thumb.getElementsByClassName("overlayshadow")[0];
-		//$(shadow).slideToggle();
 
 }
 
 function hidethumbnailTitle(thumb) {
 
 		var shadow = thumb.getElementsByClassName("overlayshadow")[0];
-		//$(shadow).slideToggle();
 
 }
 

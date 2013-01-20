@@ -10,7 +10,7 @@
  <?php 
 
  	//for CSS targetting
- 	$curpost = 0;
+
 
  	if ( is_home() ) {
  	
@@ -35,7 +35,8 @@
 
 
 	//render a grid of thumbnails.
-	
+		
+ 		$maxposts =40;
 		$curpost = 0;
 		//first get the newest games
 		
@@ -43,7 +44,7 @@
 		$visibleposts = array();
 		//on the homepage, render some new games before the popular games
 		if (is_home()) {
-			$args = array('orderby' => 'post_date', 'order' => 'DESC','numberposts' => 10);
+			$args = array('orderby' => 'post_date', 'order' => 'DESC','numberposts' => 8);
 			$postslist = get_posts( $args );
 		
 			foreach ($postslist as $post) :  
@@ -62,13 +63,13 @@
 	
 
 		if (is_home()) {
-			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value_num', 'order' => 'desc','numberposts' => 40);	
+			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value_num', 'order' => 'desc','numberposts' => 80);	
 		}
 		else if (is_category()){
-			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value_num', 'order' => 'desc','numberposts' => 40,'category' => get_query_var('cat') );
+			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value_num', 'order' => 'desc','numberposts' => 80,'category' => get_query_var('cat') );
 		}
 		else if (is_tag()) {
-			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value_num', 'order' => 'desc','numberposts' => 40,'tag' => get_query_var('tag') );	
+			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value_num', 'order' => 'desc','numberposts' => 80,'tag' => get_query_var('tag') );	
 		}
 		else if(is_search()){
 			$args = array('s' => get_query_var('s'));
@@ -82,6 +83,7 @@
 				setup_postdata($post); 
 				include 'renderthumbnail.php';
 				$curpost++; 
+				if ($curpost == $maxposts) break;
 			}
 		endforeach;
 		wp_reset_postdata(); 

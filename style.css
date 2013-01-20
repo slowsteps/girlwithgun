@@ -142,7 +142,7 @@ h2.archiveheader {
 
 	padding:5px;
 	/*	line-height: 24px; */
-
+	
 }
 
 .tagbutton {
@@ -323,7 +323,7 @@ h2.archiveheader {
 
 .newgamelabel {
 	position: absolute;
-	background-color:deeppink;
+	background-repeat: no-repeat;
 	color:floralwhite;
 	top: 0px;
 	right: 0px;
