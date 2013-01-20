@@ -51,12 +51,19 @@ if ( empty($withcomments) && !is_single() ) {
 <?php wp_head(); ?>
 
 
-
+<?php 
+	//site specific google tracking id
+	if (strtolower(get_bloginfo('name')) == "sohorses") $trackingid = "UA-1140834-4";
+	else if (strtolower(get_bloginfo('name')) == "girlwithgun") $trackingid = "UA-1140834-1";
+	else $trackingid = "UA-1140834-1";
+?>
 
 <script type="text/javascript">
 
+
+
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-1140834-1']);
+  _gaq.push(['_setAccount', '<?php echo $trackingid;?>');
   _gaq.push(['_trackPageview']);
 
   (function() {
