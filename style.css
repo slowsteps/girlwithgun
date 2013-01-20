@@ -95,10 +95,11 @@ h2.singlepostheader {
 }
 
 /* header above category and tag pages */
-h2.archiveheader {
+h2.archiveheader, h2.pageheader {
 	 font-size:24px;
 	 margin-right: 20px;
 }
+
 
 #backbutton {
 	color:white;
