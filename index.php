@@ -13,7 +13,12 @@
  	$curpost = 0;
 
  	if ( is_home() ) {
- 		//
+ 	
+ 	}	
+	if ( is_search()) {
+		echo "<h2 class=\"archiveheader\">";
+		echo "Games matching: \"". get_query_var('s')."\"";
+		echo "</h2>";	
 	}
 	if (is_category()) {
 		echo "<h2 class=\"archiveheader\">";
@@ -64,6 +69,9 @@
 		}
 		else if (is_tag()) {
 			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value_num', 'order' => 'desc','numberposts' => 40,'tag' => get_query_var('tag') );	
+		}
+		else if(is_search()){
+			$args = array('s' => get_query_var('s'));
 		}
 
 		$postslist = get_posts( $args );
