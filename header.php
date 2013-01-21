@@ -22,8 +22,10 @@ _deprecated_file( sprintf( __( 'Theme without %1$s' ), basename(__FILE__) ), '3.
 
 <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 
-<link rel="shortcut icon" href="/wp-content/themes/girlwithgun/sohorses.ico">
+<link rel="shortcut icon" href="/wp-content/themes/girlwithgun/sohorses.ico?v=2">
 <?php 
+
+
 
 //add portal specific CSS overrides  
 if ( strtolower(get_bloginfo('name')) == "sohorses" ) echo '<link rel="stylesheet" href="/wp-content/themes/girlwithgun/sohorses.css" type="text/css" media="screen" />';
@@ -91,6 +93,11 @@ function hidethumbnailTitle(thumb) {
 
 <div id="header" role="banner">
 	<a href="<?php echo home_url(); ?>/">
+	<?php 
+	if(!is_home()) {
+		//echo '<div id="homebutton">Home</div>';
+	}
+	?>
 	<div id="headerimg" onclick="_gaq.push(['_trackEvent', 'logo', 'clicked'])">
 		<h1><?php bloginfo('name'); ?></h1>
 		<div class="description"><?php bloginfo('description'); ?></div>

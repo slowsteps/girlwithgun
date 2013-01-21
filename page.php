@@ -33,8 +33,10 @@ wp_reset_postdata();
 	<?php 
 		the_title("<h2 class=\"pageheader\">","</h2>");
 		the_content();
+	
 		the_tags("<span class=\"tagbutton\"  onclick=\"_gaq.push(['_trackEvent', 'tag', 'clicked'])\"   >","</span><span onclick=\"_gaq.push(['_trackEvent', 'tag', 'clicked'])\" class=\"tagbutton\">","</span>");	
 		wp_reset_postdata();
+
 	?>
 	
 	

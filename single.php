@@ -5,6 +5,12 @@
 <div id="relatedcol">
 	<div id="related">
 		
+		<a href="\">
+			<?php 
+			if(!is_home()) echo '<div id="homebutton">Home</div>';
+			?>
+		</a>
+
 		<?php
 			
 			$curpost = 0;
@@ -38,7 +44,9 @@
 
 <div id="midcol">
 	
+	<!--
 	<a href="/"><div id="backbutton">home</div></a>
+	-->
 
 	<?php 
 		//track this gameplay in a meta filed posts_views_count

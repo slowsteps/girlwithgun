@@ -13,6 +13,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 *{
 	margin: 0px;
 	padding: 0px;
+	background-repeat: no-repeat;
 	
 }
 
@@ -113,6 +114,23 @@ h2.archiveheader, h2.pageheader {
  	margin-right:10px;
 }
 
+#homebutton {
+
+	color:white;
+	
+	background-image: url("homebutton.png");
+	width:100px;
+	height:40px;
+	margin-right:20px;
+	margin-top:9px;
+	margin-bottom:20px;
+	padding-top:15px;
+	padding-left:15px;
+	font-size: 18px;
+	float:left;
+	text-align: center;
+}
+
 #backbutton:hover {
 	background-image: url('backbuttongirlwithgunhover.png');
 }
@@ -198,6 +216,7 @@ h2.archiveheader, h2.pageheader {
 	margin-top:0px;
 	padding: 6px;
 	margin-right:20px;
+	margin-left:0px;
 	
 }
 
@@ -234,7 +253,7 @@ h2.archiveheader, h2.pageheader {
 /*searchform*/
 
 #searchformbox {
-	margin-top:20px;
+	margin-top:15px;
 	margin-left:20px;
 	float: left;
 }	
