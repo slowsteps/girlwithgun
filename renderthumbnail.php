@@ -30,7 +30,7 @@
 		$post_age = round((date('U') -  get_the_date('U'))/86400);
 		if ($post_age<8) {
 			echo("<div class=\"newgamelabel\">");
-				//echo "new ";
+				echo "new ";
 			echo("</div>");
 		}
 	echo "</div>";

@@ -78,7 +78,8 @@
 			//get the width and height of the game from the editor custom fields
 			$customfieldwidth = get_post_custom_values('swf-width', $post->ID);
 			$gamewidth = $customfieldwidth[0];
-			if ($gamewidth==0) $gamewidth=600;
+			if ($gamewidth==0) $gamewidth=600;	
+
 			$customfieldheight = get_post_custom_values('swf-height', $post->ID);
 			$gameheight = $customfieldheight[0];
        		if ($gameheight==0) $gameheight=480;

@@ -34,17 +34,19 @@
 	}
 
 
+
 	//render a grid of thumbnails.
-		
- 		$maxposts =40;
+		$paged = get_query_var('page');
+ 		$maxposts =8;
 		$curpost = 0;
+		$numnewposts = 8; //first row of games are the latest, the following row are sorted by popularity (views)
 		//first get the newest games
-		
+		$pageoffset =  get_query_var('page');
 		//new games will be stored to prevent double rendering on homepage
 		$visibleposts = array();
 		//on the homepage, render some new games before the popular games
-		if (is_home()) {
-			$args = array('orderby' => 'post_date', 'order' => 'DESC','numberposts' => 8);
+		if (is_home() And !$paged) {
+			$args = array('orderby' => 'post_date', 'order' => 'DESC','numberposts' => $numnewposts);
 			$postslist = get_posts( $args );
 		
 			foreach ($postslist as $post) :  
@@ -55,6 +57,7 @@
 					setup_postdata($post); 
 					include 'renderthumbnail.php';
 					$curpost++; 
+					$numnewposts++;
 				}
 			endforeach;
 			//reset counter for the next loop
@@ -74,6 +77,10 @@
 		else if(is_search()){
 			$args = array('s' => get_query_var('s'));
 		}
+
+		//paging
+		
+		if ($paged) $args['offset'] = ($maxposts*$paged) - $numnewposts;
 
 		$postslist = get_posts( $args );
 		

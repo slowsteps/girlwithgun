@@ -132,12 +132,16 @@ h2.archiveheader, h2.archiveheader a:link, h2.archiveheader a:visited {
 	box-shadow: 0px 0px 20px hotpink;
 }
 
+.glow {
+	box-shadow: 0px 0px 20px hotpink;
+}
+
 .newgamelabel {
 	position: absolute;
+	background-color: transparent;
 	background-image: url('rosettebig.png');
-	background-repeat: no-repeat;
 	background-position: right top;
-	color:floralwhite;
+	color:transparent;
 	top: -10px;
 	right: -16px;
 	width: 100%;
