@@ -37,7 +37,7 @@
 
 	//render a grid of thumbnails.
 		$paged = get_query_var('page');
- 		$maxposts =8;
+ 		$maxposts =40;
 		$curpost = 0;
 		$numnewposts = 8; //first row of games are the latest, the following row are sorted by popularity (views)
 		//first get the newest games
