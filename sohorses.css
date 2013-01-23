@@ -140,6 +140,7 @@ h2.archiveheader, h2.archiveheader a:link, h2.archiveheader a:visited {
 	position: absolute;
 	background-color: transparent;
 	background-image: url('rosettebig.png');
+	
 	background-position: right top;
 	color: transparent;
 	top: -10px;

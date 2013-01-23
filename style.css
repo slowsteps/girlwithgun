@@ -351,10 +351,28 @@ h2.archiveheader, h2.pageheader {
 	width: 100%;
 }
 
+/* PAGER */
 
+#pager {
 
+	
+	clear:both;
+	text-align: center;
 
+}
 
+#pager span {
+	color: floralwhite;
+	
+	margin:5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: center;
+}
+
+#pager span.selected {
+	color: deeppink;
+}
 
 
 /* ALIGN */
