@@ -58,4 +58,11 @@ if($count==''){
 //prevent prefetched articles from generating views
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 
+
+function trace($instr) {
+
+    echo "<script>console.log(\"$instr\")</script>";
+
+}
+
 ?>

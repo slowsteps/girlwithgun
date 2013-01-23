@@ -82,17 +82,20 @@
 	
 		function IDinPopularList($instr) {
 			global $postslistpopular;
+			global $maxposts;
+			trace("--------------");
+			for ($i=0;$i<$maxposts;$i++) {
+				$post = $postslistpopular[$i];
 
-			$ret = false;
-			foreach ($postslistpopular as $post) {  
+				trace($i ." - ".$post->post_name." - ".$instr);
 				if ($post->post_name == $instr) {
-					$ret = true;
-					break;
+					//trace($i ." - ".$post->post_name." - ".$instr);
+					return true;
 				}
 			}
-			
-			return $ret;
+			return false;
 		}
+
 
 
 		//GET THE NEWEST
@@ -102,10 +105,12 @@
 						//max 8 days old
 						$post_age = round((date('U') -  get_the_date('U'))/86400);
 						if ($post_age<8) {
-							if ( ! IDinPopularList($post->post_name) ) {
+
+							if ( !IDinPopularList($post->post_name) ) {
 								array_unshift($postslistpopular, $post);
-								//echo " added to front:".$post->post_name;
+								trace("not on the homepage, added to the front of the list:".$post->post_name);
 							}
+							else trace("already on homepage:".$post->post_name);
 							
 						}
 			endforeach;
@@ -113,16 +118,7 @@
 			wp_reset_postdata(); 
 		}
 		
-		//RENDER THE combined list
-		/*
-		foreach ($postslistpopular as $post) {  
-			//don't display when already visible as a new game
-				setup_postdata($post); 
-				include 'renderthumbnail.php';
-				$curpost++; 
-				if ($curpost == $maxposts) break;
-		}
-		*/
+
 
 		$start = 0 + $paged*$maxposts;
 		//$start = (int)$start;
