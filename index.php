@@ -58,15 +58,15 @@
 		//ARGS FOR POPULAR
 		if (is_home()) {
 			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value_num', 'order' => 'desc','numberposts' => $totalposts);	
-			$argsnew = array('orderby' => 'post_date', 'order' => 'DESC','numberposts' => '$totalposts');
+			$argsnew = array('orderby' => 'post_date', 'order' => 'ASC','numberposts' => '$totalposts');
 		}
 		else if (is_category()){
 			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value_num', 'order' => 'desc','numberposts' => $totalposts,'category' => get_query_var('cat') );
-			$argsnew = array('orderby' => 'post_date', 'order' => 'DESC','numberposts' => '$totalposts','category' => get_query_var('cat'));
+			$argsnew = array('orderby' => 'post_date', 'order' => 'ASC','numberposts' => '$totalposts','category' => get_query_var('cat'));
 		}
 		else if (is_tag()) {
 			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value_num', 'order' => 'desc','numberposts' => $totalposts,'tag' => get_query_var('tag') );	
-			$argsnew = array('orderby' => 'post_date', 'order' => 'DESC','numberposts' => '$totalposts','category' => get_query_var('tag'));
+			$argsnew = array('orderby' => 'post_date', 'order' => 'ASC','numberposts' => '$totalposts','category' => get_query_var('tag'));
 		}
 		else if(is_search()){
 			$args = array('s' => get_query_var('s'));
