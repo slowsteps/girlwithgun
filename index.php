@@ -50,7 +50,7 @@
 		$curpost = 0;
 		
 		//new games will be stored to prevent double rendering on homepage
-		$visiblepostIDS = array();
+		//$visiblepostIDS = array();
 		
 
 		
@@ -70,66 +70,70 @@
 		}
 		else if(is_search()){
 			$args = array('s' => get_query_var('s'));
-			$argsnew = array();
+			$argsnew = array(); 
 		}
 
 	
-
+		//COMBINED LIST
+		$combinedgames = array();
 
 		//GET POPULAR
 		$postslistpopular = get_posts( $args );
 			
 	
-		function IDinPopularList($instr) {
-			global $postslistpopular;
-			global $maxposts;
-			trace("--------------");
-			for ($i=0;$i<$maxposts;$i++) {
-				$post = $postslistpopular[$i];
-
-				trace($i ." - ".$post->post_name." - ".$instr);
-				if ($post->post_name == $instr) {
-					//trace($i ." - ".$post->post_name." - ".$instr);
+		function gameInNewList($inpost) {
+			global $combinedgames;
+			
+			foreach ($combinedgames as $post) {
+				if ($post->ID == $inpost->ID) {
+					//echo "match".$post->post_name;
 					return true;
 				}
 			}
+
 			return false;
 		}
 
 
 
+		//TODO MAKE G SYSTEM. Make a combined list. Push all young games to the front. Push populars one by one, if not duplicating a new one.. 
+
 		//GET THE NEWEST
-		if (!$paged) {
-			$postslistnew = get_posts( $argsnew );		
-				foreach ($postslistnew as $post) :  
-						//max 8 days old
-						$post_age = round((date('U') -  get_the_date('U'))/86400);
-						if ($post_age<8) {
-
-							if ( !IDinPopularList($post->post_name) ) {
-								array_unshift($postslistpopular, $post);
-								trace("not on the homepage, added to the front of the list:".$post->post_name);
-							}
-							else trace("already on homepage:".$post->post_name);
-							
-						}
-			endforeach;
-			//reset counter for the next loop
-			wp_reset_postdata(); 
-		}
 		
+		$postslistnew = get_posts( $argsnew );		
+			foreach ($postslistnew as $post) :  
+					//max 8 days old
+					$post_age = round((date('U') -  get_the_date('U'))/86400);
+					if ($post_age<8 And !is_search()) {
+							array_unshift($combinedgames, $post);
+							
+					}
+			endforeach;
+		//reset counter for the next loop
+		wp_reset_postdata(); 
+		
+		
+		//ADD POPULAR
+		foreach ($postslistpopular as $post) {
+			if (!gameInNewList($post)) {
+				array_push($combinedgames, $post);
+			
+			}
+			
+		}
 
+
+		//RENDERING HOME AND PAGING
 
 		$start = 0 + $paged*$maxposts;
-		//$start = (int)$start;
 		$end = $start + $maxposts;
 
 		
 
 		for ($i=$start;$i<$end;$i++) {
 						
-			if ($i<$totalposts-1) {
-				$post = $postslistpopular[$i];
+			if ($i<count($combinedgames)) {
+				$post = $combinedgames[$i];
 				setup_postdata($post); 
 				include 'renderthumbnail.php';
 				$curpost++; 
@@ -140,7 +144,7 @@
 		echo '<div id="pager">';
 
 		
-		$numpages = $totalposts / $maxposts;
+		$numpages = count($combinedgames) / $maxposts;
 		if ($numpages>1) {
 			for ($i=0;$i<$numpages;$i++) {
 				if ($i == $paged) echo  '<a href="/?page='.$i.'">' .'<span class="selected">Page '.$i. '</span></a>';
