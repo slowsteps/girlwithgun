@@ -39,7 +39,7 @@
 	//first row of games are the latest, the following row are sorted by popularity (views)
 
 		$paged = get_query_var('page');
- 		$maxposts =8;
+ 		$maxposts =40;
 
 
 		//MAX 200 games.
@@ -47,7 +47,7 @@
 		if ($postcount > 200) $totalposts = 200;
 		else $totalposts = $postcount;
 		
-		$curpost = 40;
+		$curpost = 0;
 		
 		//new games will be stored to prevent double rendering on homepage
 		//$visiblepostIDS = array();
