@@ -39,7 +39,7 @@
 	//first row of games are the latest, the following row are sorted by popularity (views)
 
 		$paged = get_query_var('page');
- 		$maxposts =40;
+ 		$maxposts =8;
 
 
 		//MAX 200 games.
@@ -47,7 +47,7 @@
 		if ($postcount > 200) $totalposts = 200;
 		else $totalposts = $postcount;
 		
-		$curpost = 0;
+		$curpost = 40;
 		
 		//new games will be stored to prevent double rendering on homepage
 		//$visiblepostIDS = array();
@@ -144,11 +144,16 @@
 		echo '<div id="pager">';
 
 		
+		
+		$cur_url = $_SERVER['REQUEST_QUERY'];
+
+		
+
 		$numpages = count($combinedgames) / $maxposts;
 		if ($numpages>1) {
 			for ($i=0;$i<$numpages;$i++) {
-				if ($i == $paged) echo  '<a href="/?page='.$i.'">' .'<span class="selected">Page '.$i. '</span></a>';
-				else echo  '<a href="/?page='.$i.'">' .'<span>Page '.$i. '</span></a>';
+				if ($i == $paged) echo  "<a href=\"$cur_url?page=$i\">" ."<span class=\"selected\">-</span></a>";
+				else echo  "<a href=\"$cur_url?page=$i\">" . "<span>-</span></a>";
 			}
 		}
 

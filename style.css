@@ -363,15 +363,17 @@ h2.archiveheader, h2.pageheader {
 
 #pager span {
 	color: floralwhite;
-	
+	background-color: floralwhite;
 	margin:5px;
 	padding-left: 5px;
 	padding-right: 5px;
 	text-align: center;
+	border-radius: 15px;
 }
 
 #pager span.selected {
 	color: deeppink;
+	background-color: deeppink;
 }
 
 
