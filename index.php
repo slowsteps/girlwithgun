@@ -66,7 +66,7 @@
 		}
 		else if (is_tag()) {
 			$args = array( 'meta_key' => 'post_views_count', 'orderby' => 'meta_value_num', 'order' => 'desc','numberposts' => $totalposts,'tag' => get_query_var('tag') );	
-			$argsnew = array('orderby' => 'post_date', 'order' => 'ASC','numberposts' => '$totalposts','category' => get_query_var('tag'));
+			$argsnew = array('orderby' => 'post_date', 'order' => 'ASC','numberposts' => '$totalposts','tag' => get_query_var('tag'));
 		}
 		else if(is_search()){
 			$args = array('s' => get_query_var('s'));
