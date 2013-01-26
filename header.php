@@ -15,13 +15,13 @@ _deprecated_file( sprintf( __( 'Theme without %1$s' ), basename(__FILE__) ), '3.
 <head profile="http://gmpg.org/xfn/11">
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 
-<!--<meta name="description" content="-->
+
 <?php 
 	//echo get_query_var('post');
 	if (is_single()) echo get_post_custom_values('meta_description', $post->ID);
-	else echo bloginfo('description');
+	else echo "<meta name=\"description\" content=\"" .get_bloginfo('description') . "\"/>";
 ?>
-<!--">-->
+
 
 
 <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
