@@ -1,25 +1,47 @@
 
 
-<div id="footer" role="contentinfo">
+<style>
+.stretch {
+	clear:both;
+}
+</style>
 
+
+<div class="stretch"></div>
+
+		<?php wp_footer(); ?>
+
+		<!--end #page div-->
+
+
+
+
+</div>
+
+
+<div id="footer">
 
 	<div id="tagcloud">
+
 		<?php 
-			$args = array('number' => 10);
+			$args = array('number' => 8);
 			wp_tag_cloud($args); 
 
 		?>
 	</div>
 
 	<div>
-		<a href="/">Home</a> - 
-		<a href="/about">About <?php echo get_bloginfo('name');?></a>
-		- &copy 2013 Wungi
+		<div id="siteinfo">
+			<?php echo get_site_option('siteinfo'); ?>
+		</div>
+		
+		<a href="/">home</a> |  
+		<a href="/about">about <?php echo get_bloginfo('name');?></a>
+		| &copy 2013 Wungi
 	</div>
+
+
 </div>
 
-		<?php wp_footer(); ?>
-		<!--end #page div-->
-</div>
 </body>
 </html>

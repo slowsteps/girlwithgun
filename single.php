@@ -38,6 +38,7 @@
 			endforeach;
 			wp_reset_postdata(); 
 		?>
+	
 	</div>
 	
 </div>
