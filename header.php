@@ -17,9 +17,10 @@ _deprecated_file( sprintf( __( 'Theme without %1$s' ), basename(__FILE__) ), '3.
 
 
 <?php 
-	//echo get_query_var('post');
-	if (is_single()) echo get_post_custom_values('meta_description', $post->ID);
-	else echo "<meta name=\"description\" content=\"" .get_bloginfo('description') . "\"/>";
+	//META DESCRIPTIONS FOR GOOGLE
+	if (is_single()) $meta = get_post_meta($post->ID,'meta-description',true);
+	else $meta = get_bloginfo('description');
+	echo "<meta name=\"description\" content=\"" .$meta. "\"/>";
 ?>
 
 
