@@ -85,15 +85,13 @@
 			$gameheight = $customfieldheight[0];
        		if ($gameheight==0) $gameheight=600;
 
-       		
-       		
-
+  
        	?>
 
     	var flashvars = {};
 		//var params = { scale: "exactfit" };
 		//var params = { scale: "noscale" };
-		var params = { scale: "showAll" };
+		var params = { scale: "showAll", bgcolor: "#FFFAF0"};
 
 		var attributes = {};    	
     	swfobject.embedSWF("<?php echo $attachment->guid; ?>", "flashgame", "<?php echo $gamewidth;?>", "<?php echo $gameheight;?>", "11.0.0","expressInstall.swf", flashvars, params, attributes);
