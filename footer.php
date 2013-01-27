@@ -37,7 +37,7 @@
 		
 		<a href="/">home</a> |  
 		<a href="/about">about <?php echo get_bloginfo('name');?></a>
-		| &copy 2013 Wungi
+		| &copy 2013 wungi
 	</div>
 
 

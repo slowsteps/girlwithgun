@@ -71,7 +71,7 @@ Three colum layout for game pages and general pages
 }
 
 #centergame {
-	border: solid #444444	2px;
+	
 	background-color: #444444;
 	margin: auto;
 	margin-top: 10px;
@@ -290,6 +290,10 @@ h2.archiveheader, h2.pageheader {
 	background-color: #25b516;
 	border: 0px solid #25b516;
 }
+
+/* jquery autocomplete */
+
+
 
 /*
 	thumbnails on homepage and related column
