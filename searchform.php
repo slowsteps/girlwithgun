@@ -87,7 +87,7 @@ var games = [];
 
 
 	function onSelect (event, ui) {
-		 location.href = "/" + ui.item.name;
+		 location.href = "/games/" + ui.item.name;
 		 //ui.item.name;
     }
 
