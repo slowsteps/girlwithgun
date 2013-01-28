@@ -57,7 +57,7 @@
 		$extragames = get_posts( $args );	
 		
 		foreach ($extragames as $post) {
-			$post->tag = $tag->slug;
+			$post->tag = $tag->name;
 			array_push($gameslistbytags, $post);
 		}
 
@@ -97,7 +97,7 @@ var games = [];
 		//url to open
 		$name = $post->post_name;
 		//echo "var gamedata = {label: \"$lowtitle\", value: \"$lowtitle\", thumb:\"$thumb\", thumburl:\"$thumburl\",name:\"$name\"};";
-		echo "var gamedata = {label: \"$tag\", value: \"$lowtitle\", thumb:\"$thumb\", thumburl:\"$thumburl\",name:\"$name\"};";
+		echo "var gamedata = {label: \"$tag\", value: \"$tag\", thumb:\"$thumb\", thumburl:\"$thumburl\",name:\"$name\"};";
 		echo "\ngames.push(gamedata);\n";
 	}
 	
