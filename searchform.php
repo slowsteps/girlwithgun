@@ -49,18 +49,22 @@
 
 	$alltags = get_tags();
 	foreach ($alltags as $tag) {
+
+		//echo $tag->name . " - ";
+		//var_dump($tag);
 		
-		$args = array('orderby' => 'post_views_count', 'order' => 'desc','tag'=>$tag->name,'numberposts' => 200);	
+		$args = array('orderby' => 'post_views_count', 'order' => 'desc','tag'=>$tag->slug,'numberposts' => 200);	
 		$extragames = get_posts( $args );	
 		
 		foreach ($extragames as $post) {
-			$post->tag = $tag->name;
+			$post->tag = $tag->slug;
 			array_push($gameslistbytags, $post);
 		}
 
 		
 	}
 	
+	//var_dump($gameslistbytags)
 
 
 ?>
