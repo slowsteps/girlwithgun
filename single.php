@@ -56,15 +56,18 @@
 
 
 		the_title("<h2 class=\"singlepostheader\">","</h2>");
+
 		//uncomment if you want to display text entered in the post editor
 		//the_content();
 		echo "<div id=\"categoryandtags\">";
-			echo "More games with: ";
-			echo "<span class =\"tagbutton\">";
-				the_category('</span><span class ="tagbutton">'); 
-			echo "</span>";
-			the_tags("<span class=\"tagbutton\"  onclick=\"_gaq.push(['_trackEvent', 'tag', 'clicked'])\"   >","</span><span onclick=\"_gaq.push(['_trackEvent', 'tag', 'clicked'])\" class=\"tagbutton\">","</span>");	
+			echo "<div id=\"tag_intro\">More games with: </div>";
+			echo "<div class =\"tagbutton\">";
+				the_category('</div><div class ="tagbutton">'); 
+			echo "</div>";
+			the_tags("<div class=\"tagbutton\"  onclick=\"_gaq.push(['_trackEvent', 'tag', 'clicked'])\"   >","</div><div onclick=\"_gaq.push(['_trackEvent', 'tag', 'clicked'])\" class=\"tagbutton\">","</div>");	
 		echo "</div>";	
+
+		
 
 		wp_reset_postdata();
 		//fetch the swf file that is attached (bound) to the post
@@ -102,25 +105,53 @@
 		<div id="flashgame">
       		Flash game not loaded - you are offline, or the media attachement could not be found.
     	</div>
+    	
+    	<div id="preroll">
+			<script type="text/javascript"><!--
+			google_ad_client = "ca-pub-4715818108855319";
+			/* preroll-ad */
+			google_ad_slot = "2373889076";
+			google_ad_width = 336;
+			google_ad_height = 280;
+			//-->
+			</script>
+			<script type="text/javascript"src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+			
+
+
+			<a href="#" onclick="hidePreroll();" >
+				<div id="skiplink">play game</div>
+			</a>
+		
+			<style>
+				#loadingbar {
+					color:floralwhite;
+					margin:auto;
+					width:200px;
+					background-color: deeppink;
+				}
+			</style>
+
+
+		</div>
+	
+
+		<script>
+
+			$('#skiplink').hide();
+			$('#skiplink').delay(1000).fadeIn(3000);
+
+			function hidePreroll() {
+				$('#preroll').hide();
+			}
+		</script>
+
+		<?php echo "<p id=\"gamesummary\">" . get_post_meta($post->ID,'meta-description',true) . "</p>"; ?>
+
+
     </div>
 	
 	
-</div>
-
-
-<div id="rightcol">	
-	<script type="text/javascript"><!--
-	google_ad_client = "ca-pub-4715818108855319";
-	/* girlwithgun skyscraper */
-	google_ad_slot = "5069061423";
-	google_ad_width = 160;
-	google_ad_height = 600;
-	//-->
-	</script>
-	<!--
-	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-	</script>
-	-->
 </div>
 
 

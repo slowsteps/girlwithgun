@@ -33,8 +33,44 @@ body {
 	border-top-left-radius:15px;
 	border-top-right-radius:15px;
 	min-height: 580px;
+	position: relative;
 }
 
+#preroll {
+	width:810px;
+	height:500px;
+	background-color: floralwhite;
+	position: absolute;
+	top:160px;
+	padding-top: 100px;
+	
+}
+
+#skiplink  {
+	margin:auto;
+	margin-top: 30px;
+	border-radius: 5px;
+	background-color: hotpink;
+	padding:5px;
+	width:200px;
+}
+
+#skiplink:hover {
+	background-color: deeppink;
+}
+
+#skiplink a:link, #skiplink a:visited {
+	color: floralwhite;
+	font-size: 24px;
+}
+
+a.white {
+	color: floralwhite;
+}
+
+#skiplink a {
+	color:floralwhite;
+}
 
 h1 {
  font:bold, 24px;
@@ -84,6 +120,12 @@ Three colum layout for game pages and general pages
 	color:orange;
 }
 
+/* game summary */
+
+#gamesummary {
+	opacity:0.5;
+}
+
 #rightcol {
 	float:left;
 	padding-left:0px;
@@ -95,10 +137,12 @@ h2.singlepostheader {
 	 font-size:24px;
 	 float:left;
 	 margin-right: 20px;
+	 text-transform:capitalize;
 }
 
 /* header above category and tag pages */
 h2.archiveheader, h2.pageheader {
+	 text-transform:capitalize;
 	 font-size:24px;
 	 margin-right: 20px;
 }
@@ -152,7 +196,7 @@ h2.archiveheader, h2.pageheader {
 /* category navigation menu */
 
 #categories {
-	padding:10px;
+	
 	margin-left: 10px;
 	clear:both;
 	color:white;
@@ -160,33 +204,33 @@ h2.archiveheader, h2.pageheader {
 }
 
 #categoryandtags {
-
-	padding:5px;
+	
+	
+	background-color: purple;
+	padding:0px;
 	/*	line-height: 24px; */
 	
 }
 
-.tagbutton {
-	background-color: #25b516;
-	padding:4px;
-	border-radius:4px;
-	margin-left:6px;
+#tag_intro {
+	font-style: italic;
+	color:hotpink;
+	padding-top:9px;
+	margin-right:6px;
+	float:left;
 }
 
-
-.categorybutton {
+.tagbutton {
+	float:left;
 	background-color: #25b516;
 	padding:4px;
 	border-radius:4px;
 	margin-left:6px;
-	margin-bottom: 40px;
+	margin-top:4px	;
+	margin-bottom:5px;
 }
 
 .tagbutton:hover {
-	background-color: #60CC16;
-}
-
-.categorybutton:hover {
 	background-color: #60CC16;
 }
 
@@ -195,14 +239,13 @@ h2.archiveheader, h2.pageheader {
 	color:white;
 }
 
-.categorybutton a:visited, .categorybutton a:link {
-	color:white;
-}
+
 
 
 /*header and footer*/
 
 #header {
+
 	display: block;
 	clear:both;
 	margin-bottom:10px;
