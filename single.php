@@ -119,9 +119,9 @@
 			
 
 
-			<a href="#" onclick="hidePreroll();" >
-				<div id="skiplink">play game</div>
-			</a>
+			
+			<div id="skiplink"><a href="javascript:void(0)" onclick="hidePreroll();" >play game</a></div>
+			
 		
 			<style>
 				#loadingbar {
