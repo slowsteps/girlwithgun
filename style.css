@@ -123,6 +123,7 @@ Three colum layout for game pages and general pages
 /* game summary */
 
 #gamesummary {
+	margin-top: 5px;
 	opacity:0.5;
 }
 

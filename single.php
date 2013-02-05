@@ -146,7 +146,7 @@
 			}
 		</script>
 
-		<?php echo "<p id=\"gamesummary\">" . get_post_meta($post->ID,'meta-description',true) . "</p>"; ?>
+		<?php echo "<div id=\"gamesummary\">" . get_post_meta($post->ID,'meta-description',true) . "</div>"; ?>
 
 
     </div>
