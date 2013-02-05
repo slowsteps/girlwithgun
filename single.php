@@ -57,17 +57,21 @@
 
 		the_title("<h2 class=\"singlepostheader\">","</h2>");
 
-		//uncomment if you want to display text entered in the post editor
-		//the_content();
+		//only display a tag if there are two or more games with that tag
 		echo "<div id=\"categoryandtags\">";
-			echo "<div id=\"tag_intro\">More games with: </div>";
-			echo "<div class =\"tagbutton\">";
-				the_category('</div><div class ="tagbutton">'); 
-			echo "</div>";
-			the_tags("<div class=\"tagbutton\"  onclick=\"_gaq.push(['_trackEvent', 'tag', 'clicked'])\"   >","</div><div onclick=\"_gaq.push(['_trackEvent', 'tag', 'clicked'])\" class=\"tagbutton\">","</div>");	
-		echo "</div>";	
-
-		
+		$posttags = get_the_tags();
+			if ($posttags) {
+	 			 foreach($posttags as $tag) {
+	    			
+	  				if ( $tag->count > 1 ) {
+		  				echo "<div class =\"tagbutton\">";
+		  					$url = get_tag_link($tag->term_id);
+		  					echo "<a href=\"$url\">$tag->name</a>";
+		  				echo "</div>";
+	  				}
+	  		}
+		}
+		echo "</div>";
 
 		wp_reset_postdata();
 		//fetch the swf file that is attached (bound) to the post

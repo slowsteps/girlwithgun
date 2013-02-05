@@ -54,29 +54,14 @@ h2.archiveheader, h2.archiveheader a:link, h2.archiveheader a:visited {
 }
 
 
-.categorybutton {
-	background-color: hotpink;
-	padding:4px;
-	border-radius:4px;
-	margin-left:6px;
-}
-
 .tagbutton:hover {
 	background-color: deeppink;
 }
 
-.categorybutton:hover {
-	background-color: deeppink;
-}
-
-
-.tagbutton a:visited, .tagbutton a:link {
+.tagbutton a {
 	color:white;
 }
 
-.categorybutton a:visited, .categorybutton a:link {
-	color:white;
-}
 
 #backbutton {
 	color:floralwhite;
