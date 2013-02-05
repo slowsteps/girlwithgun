@@ -59,6 +59,12 @@
 
 		//only display a tag if there are two or more games with that tag
 		echo "<div id=\"categoryandtags\">";
+
+		echo "<div id=\"tag_intro\">More games with: </div>";
+		echo "<div class =\"tagbutton\">";
+			the_category('</div><div class ="tagbutton">'); 
+		echo "</div>";
+
 		$posttags = get_the_tags();
 			if ($posttags) {
 	 			 foreach($posttags as $tag) {
