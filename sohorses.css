@@ -48,6 +48,10 @@ h2.archiveheader, h2.archiveheader a:link, h2.archiveheader a:visited {
 
 /*category and tag buttons*/
 
+#tag_intro {
+	color:hotpink;
+}
+
 .tagbutton {
 	background-color: hotpink;
 

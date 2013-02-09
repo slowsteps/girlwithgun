@@ -37,7 +37,13 @@
 		
 		<a href="/">home</a> |  
 		<a href="/about">about <?php echo get_bloginfo('name');?></a>
-		| &copy 2013 wungi | <a href="http://www.sohorses.com">Play cool horse games for girls on soHorses.com</a>
+		| &copy 2013 wungi  
+
+		<?php 
+			if (get_bloginfo('name') != 'sohorses') {
+				echo " | <a href=\"http://www.sohorses.com\">Play cool horse games for girls on soHorses.com</a>";
+			}
+		?>
 	</div>
 
 

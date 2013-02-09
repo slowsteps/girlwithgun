@@ -113,8 +113,9 @@
 		//var params = { scale: "exactfit" };
 		//var params = { scale: "noscale" };
 		//var params = { scale: "showAll", bgcolor: "#FFFAF0"};
-		var params = { scale: "showAll", bgcolor: "<?php echo $bgcolor;?>"};
-
+		//var params = { scale: "showAll", wmode: "opaque", bgcolor: "<?php echo $bgcolor;?>"};
+		var params = { scale: "showAll", wmode: "window"};
+		
 		var attributes = {};    	
     	swfobject.embedSWF("<?php echo $attachment->guid; ?>", "flashgame", "<?php echo $gamewidth;?>", "<?php echo $gameheight;?>", "11.0.0","expressInstall.swf", flashvars, params, attributes);
     </script>

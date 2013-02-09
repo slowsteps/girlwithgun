@@ -38,11 +38,12 @@ body {
 
 #preroll {
 	width:810px;
-	height:535px;
+	height:530px;
 	background-color: floralwhite;
 	position: absolute;
 	top:160px;
 	padding-top: 100px;
+	border-radius: 5px;
 	
 }
 
@@ -214,7 +215,6 @@ h2.archiveheader, h2.pageheader {
 
 #tag_intro {
 	font-style: italic;
-	color:hotpink;
 	padding-top:9px;
 	margin-right:6px;
 	float:left;
@@ -236,6 +236,7 @@ h2.archiveheader, h2.pageheader {
 
 .tagbutton a {
 
+	color:white;
 	display: block;
 	padding:4px;
 	width: 100%;
@@ -337,6 +338,7 @@ h2.archiveheader, h2.pageheader {
 }
 
 #searchsubmit {
+	font-size: 14px;
 	height:30px;
 	width:60px;
 	margin-left:6px;
