@@ -105,7 +105,7 @@ Three colum layout for game pages and general pages
 
 #centergame {
 	
-	background-color: #444444;
+	background-color: #d2d2e6;
 	margin: auto;
 	margin-top: 10px;
 	text-align: center;
@@ -115,6 +115,7 @@ Three colum layout for game pages and general pages
 /* this div will be removed by swfobject */
 #flashgame {
 	color:orange;
+	background-color:orange;
 }
 
 /* game summary */
@@ -242,6 +243,14 @@ h2.archiveheader, h2.pageheader {
 	
 }
 
+.tagbutton:active {
+
+	margin-left:8px;
+	margin-top:6px;
+	margin-right:-2px;
+	
+}
+
 
 
 
@@ -360,6 +369,7 @@ h2.archiveheader, h2.pageheader {
 .post:hover {
 	background-color: rgb(220,220,240)
 }
+
 
 
 .post .content .under {

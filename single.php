@@ -99,12 +99,21 @@
        		if ($gameheight==0) $gameheight=600;
 
   
+			
+			if (get_bloginfo('name') == 'sohorses') $bgcolor = "#FFFAF0";
+			else $bgcolor = "#d2d2e6";
+			
+
+	
+
+
        	?>
 
     	var flashvars = {};
 		//var params = { scale: "exactfit" };
 		//var params = { scale: "noscale" };
-		var params = { scale: "showAll", bgcolor: "#FFFAF0"};
+		//var params = { scale: "showAll", bgcolor: "#FFFAF0"};
+		var params = { scale: "showAll", bgcolor: "<?php echo $bgcolor;?>"};
 
 		var attributes = {};    	
     	swfobject.embedSWF("<?php echo $attachment->guid; ?>", "flashgame", "<?php echo $gamewidth;?>", "<?php echo $gameheight;?>", "11.0.0","expressInstall.swf", flashvars, params, attributes);
