@@ -354,10 +354,7 @@ h2.archiveheader, h2.pageheader {
 }
 
 /* facebook like the site */
-.fb-like {
-
-	
-	
+.fb-like {	
 	margin-left: 5px;
 	border-radius: 5px;
 }
@@ -389,6 +386,10 @@ h2.archiveheader, h2.pageheader {
 }
 
 
+#posttext {
+	
+	margin-top:15px;
+}
 
 .post .content .under {
 	line-height:16px;
