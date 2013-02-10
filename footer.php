@@ -42,6 +42,7 @@
 		<?php 
 			if (get_bloginfo('name') != 'sohorses') {
 				echo " | <a href=\"http://www.sohorses.com\">Play cool horse games for girls on soHorses.com</a>";
+				echo " | <a href=\"http://www.girlwithgun.com/quadgamesvault\">quadgames.com vault</a>";
 			}
 		?>
 	</div>
