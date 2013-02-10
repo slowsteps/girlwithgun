@@ -152,9 +152,12 @@
 				}
 			</style>
 
-
+			
 		</div>
-	
+			
+			<div id="posttext">
+				<?php the_content(); ?>
+			</div>
 
 		<script>
 

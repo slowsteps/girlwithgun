@@ -31,6 +31,7 @@
 		echo "<h2 class=\"archiveheader\">";
 		echo get_query_var('tag');
 		echo "</h2>";
+		echo '<div class="categorydescription">'.tag_description()."</div>";
 	}
 
 
