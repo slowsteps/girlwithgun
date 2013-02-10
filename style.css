@@ -353,6 +353,18 @@ h2.archiveheader, h2.pageheader {
 	border: 0px solid #25b516;
 }
 
+/* facebook like the site */
+.fb-follow {
+
+	padding:5px;
+	background-color:hotpink;
+	margin-left: 50px;
+	margin-top:23px;
+	border-radius: 5px;
+}
+
+
+
 /* jquery autocomplete */
 
 

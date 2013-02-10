@@ -100,6 +100,16 @@ function hidethumbnailTitle(thumb) {
 
 </script>
 
+<!--FACEBOOK -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=115396571974411";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!--END FACEBOOK-->
 
 </head>
 <body <?php body_class(); ?>>
@@ -123,6 +133,10 @@ function hidethumbnailTitle(thumb) {
 	<div id="searchformbox">
 		<?php get_search_form(); ?>
 	</div>
+
+	<?php if (get_bloginfo('name') != "sohorses") echo "<!--";?>
+	<div class="fb-follow" data-href="https://www.facebook.com/sohorses" data-layout="button_count" data-show-faces="true" data-font="tahoma" data-width="100"></div>
+	<?php if (get_bloginfo('name') != "sohorses") echo "-->";?>
 
 </div>
 
