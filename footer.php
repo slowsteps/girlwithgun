@@ -35,20 +35,22 @@
 			<?php echo get_site_option('siteinfo'); ?>
 		</div>
 		
-		<a href="/">home</a> |  
+		<a href="/">Home</a> |  
 		<a href="/about">about <?php echo get_bloginfo('name');?></a>
-		| &copy 2013 wungi  
+		 
 
 		<?php 
-			if (get_bloginfo('name') != 'sohorses') {
+			if ( strtolower(get_bloginfo('name')) != "sohorses") {
 				echo " | <a href=\"http://www.sohorses.com\">Play cool horse games for girls on soHorses.com</a>";
 				echo " | <a href=\"http://www.girlwithgun.com/quadgamesvault\">quadgames vault</a>";
 			}
 		?>
 
 	<?php if ( strtolower(get_bloginfo('name')) != "sohorses") echo "<!--";?>
-	| Like soHorses on Facebook <div class="fb-like" data-href="https://www.facebook.com/sohorses" data-layout="button_count" data-show-faces="true" data-font="tahoma" data-width="100"></div>
+	| Like us on Facebook <div class="fb-like" data-href="https://www.facebook.com/sohorses" data-layout="button_count" data-show-faces="true" data-font="tahoma" data-width="100"></div>
 	<?php if ( strtolower(get_bloginfo('name')) != "sohorses") echo "-->";?>
+
+	| &copy 2013 wungi 
 
 	</div>
 
