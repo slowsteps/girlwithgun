@@ -204,6 +204,11 @@ h2.archiveheader, h2.pageheader {
 	font-size: 14px;
 }
 
+.category_or_tag_description {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
 #categoryandtags {
 	
 	

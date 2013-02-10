@@ -24,14 +24,14 @@
 		echo "<h2 class=\"archiveheader\">";
 		echo get_the_category_by_ID( get_query_var('cat') );
 		echo "</h2>";
-		echo '<div class="categorydescription">'.category_description()."</div>";
+		echo '<div class="category_or_tag_description">'.category_description()."</div>";
 	}
 
 	if (is_tag()) {
 		echo "<h2 class=\"archiveheader\">";
 		echo get_query_var('tag');
 		echo "</h2>";
-		echo '<div class="categorydescription">'.tag_description()."</div>";
+		echo '<div class="category_or_tag_description">'.tag_description()."</div>";
 	}
 
 
