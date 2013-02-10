@@ -134,7 +134,7 @@ function hidethumbnailTitle(thumb) {
 		<?php get_search_form(); ?>
 	</div>
 
-	<?php if (get_bloginfo('name') != "sohorses") echo "<!--";?>
+	<?php if strtolower((get_bloginfo('name')) != "sohorses") echo "<!--";?>
 	<div class="fb-follow" data-href="https://www.facebook.com/sohorses" data-layout="button_count" data-show-faces="true" data-font="tahoma" data-width="100"></div>
 	<?php if (get_bloginfo('name') != "sohorses") echo "-->";?>
 
