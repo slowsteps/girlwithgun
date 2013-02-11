@@ -19,7 +19,9 @@
 	echo "<div class=\"thumbnail\">";
 		//the thumbnail image
 		echo("<div class=\"thumbimg\">");
-			the_post_thumbnail('thumbnail');
+			$cleantitle = trim(strip_tags(get_the_title()));
+			$attr = array('title' => $cleantitle,'alt' => $cleantitle);
+			the_post_thumbnail('thumbnail',$attr);
 			
 		echo("</div>");
 		//rollover game title
