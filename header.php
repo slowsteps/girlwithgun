@@ -19,6 +19,8 @@ _deprecated_file( sprintf( __( 'Theme without %1$s' ), basename(__FILE__) ), '3.
 <?php 
 	//META DESCRIPTIONS FOR GOOGLE
 	if (is_single()) $meta = get_post_meta($post->ID,'meta-description',true);
+	else if (is_tag()) $meta = "Play free online " . get_query_var('tag') . " games at " . get_bloginfo("name");
+	else if (is_category()) $meta = "Play free online " . get_the_category_by_ID( get_query_var('cat') ) . " games at ". get_bloginfo("name")	;
 	else $meta = get_bloginfo('description');
 	echo "<meta name=\"description\" content=\"" .$meta. "\"/>";
 ?>
