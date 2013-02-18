@@ -144,7 +144,7 @@ function hidethumbnailTitle(thumb) {
 	<div id="category_mainmenu">
 	<?php
 
-		$args = array( 'orderby' => 'count', 'number' => '5');
+		$args = array( 'orderby' => 'count', 'order' => 'DESC', 'number' => '5');
 		$cats = get_categories($args);
 		if (is_single()) {
 			$post_cat = get_the_category();
@@ -157,7 +157,7 @@ function hidethumbnailTitle(thumb) {
 			}
 			else {
 			echo "<div class =\"tagbutton\">";
-				echo "<a href=\"/category/$cat->slug\">$cat->name</a>";
+				echo "<a href=\"/games/category/$cat->slug\">$cat->name</a>";
 			echo "</div>";
 			}
 		}
