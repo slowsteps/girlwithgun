@@ -41,7 +41,7 @@ body {
 	height:530px;
 	background-color: floralwhite;
 	position: absolute;
-	top:160px;
+	top:185px;
 	padding-top: 100px;
 	border-radius: 5px;
 	
@@ -240,11 +240,15 @@ h2.archiveheader, h2.pageheader {
 }
 
 .activecat {
-
 	background-color: deeppink !important;
-	
 }
 
+.homeicon {
+	background-image: url('homehouse.png');
+	background-repeat:no-repeat;
+	background-position: 90%;
+	padding-right:30px;
+}
 
 .tagbutton:hover {
 	background-color: #60CC16;
@@ -263,9 +267,7 @@ h2.archiveheader, h2.pageheader {
 
 .tagbutton:active {
 
-	margin-left:8px;
-	margin-top:6px;
-	margin-right:-2px;
+	
 	
 }
 

@@ -144,6 +144,12 @@ function hidethumbnailTitle(thumb) {
 	<div id="category_mainmenu">
 	<?php
 
+		if(!is_home()) {
+			echo "<div class =\"homeicon tagbutton \">";
+				echo "<a href=\"/\">Home</a>";
+			echo "</div>";	
+		}
+
 		$args = array( 'orderby' => 'count', 'order' => 'DESC', 'number' => '5');
 		$cats = get_categories($args);
 		if (is_single()) {

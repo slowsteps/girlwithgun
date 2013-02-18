@@ -7,7 +7,7 @@
 		
 		<a href="\">
 			<?php 
-			if(!is_home()) echo '<div id="homebutton">Home</div>';
+			//if(!is_home()) echo '<div id="homebutton">Home</div>';
 			?>
 		</a>
 
