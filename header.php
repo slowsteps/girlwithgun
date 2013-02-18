@@ -38,6 +38,7 @@ _deprecated_file( sprintf( __( 'Theme without %1$s' ), basename(__FILE__) ), '3.
 
 
 
+
 <?php 
 
 
@@ -136,7 +137,33 @@ function hidethumbnailTitle(thumb) {
 		<?php get_search_form(); ?>
 	</div>
 
+	<div id="facebook_like">
+		<div class="fb-like" data-href="https://www.facebook.com/sohorses" data-layout="button_count" data-show-faces="true" data-font="tahoma" data-width="100"></div>
+	</div>
 
+	<div id="category_mainmenu">
+	<?php
+
+		$args = array( 'orderby' => 'count', 'number' => '5');
+		$cats = get_categories($args);
+		if (is_single()) {
+			$post_cat = get_the_category();
+		}
+		foreach($cats as $cat) {
+			if ($cat->term_id == $post_cat[0]->term_id) {
+			echo "<div class =\"activecat tagbutton \">";
+				echo "<a href=\"/category/$cat->slug\">$cat->name</a>";
+			echo "</div>";				
+			}
+			else {
+			echo "<div class =\"tagbutton\">";
+				echo "<a href=\"/category/$cat->slug\">$cat->name</a>";
+			echo "</div>";
+			}
+		}
+
+	?>
+	</div>
 
 </div>
 

@@ -47,7 +47,7 @@
 		?>
 
 	<?php if ( strtolower(get_bloginfo('name')) != "sohorses") echo "<!--";?>
-	| <a href="http://www.facebook.com/sohorses">Like us on Facebook!</a> <div class="fb-like" data-href="https://www.facebook.com/sohorses" data-layout="button_count" data-show-faces="true" data-font="tahoma" data-width="100"></div>
+	| <!--<a href="http://www.facebook.com/sohorses">Like us on Facebook!</a> <div class="fb-like" data-href="https://www.facebook.com/sohorses" data-layout="button_count" data-show-faces="true" data-font="tahoma" data-width="100"></div>-->
 	<?php if ( strtolower(get_bloginfo('name')) != "sohorses") echo "-->";?>
 
 	| &copy 2013 wungi 

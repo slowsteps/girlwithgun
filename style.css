@@ -196,12 +196,14 @@ h2.archiveheader, h2.pageheader {
 
 /* category navigation menu */
 
-#categories {
+#category_mainmenu {
+	float:left;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left:-5px;
+	width:100%;
+	color:floralwhite;
 	
-	margin-left: 10px;
-	clear:both;
-	color:white;
-	font-size: 14px;
 }
 
 .category_or_tag_description {
@@ -226,7 +228,9 @@ h2.archiveheader, h2.pageheader {
 	float:left;
 }
 
+
 .tagbutton {
+
 	float:left;
 	background-color: #25b516;
 	border-radius:4px;
@@ -234,6 +238,13 @@ h2.archiveheader, h2.pageheader {
 	margin-top:4px	;
 	margin-bottom:5px;
 }
+
+.activecat {
+
+	background-color: deeppink !important;
+	
+}
+
 
 .tagbutton:hover {
 	background-color: #60CC16;
@@ -355,7 +366,17 @@ h2.archiveheader, h2.pageheader {
 }
 
 /* facebook like the site */
-.fb-like {	
+
+#facebook_like {
+	float:left;
+	
+	margin-top:26px;
+	margin-left:50px;
+
+}
+
+.fb-like {
+
 	margin-left: 5px;
 	border-radius: 5px;
 }
