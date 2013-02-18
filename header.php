@@ -152,11 +152,18 @@ function hidethumbnailTitle(thumb) {
 
 		$args = array( 'orderby' => 'count', 'order' => 'DESC', 'number' => '5');
 		$cats = get_categories($args);
+		//highlight the active cat on homepage and cat page
 		if (is_single()) {
-			$post_cat = get_the_category();
+			$t = get_the_category();
+			$active_cat = $t[0]->name; 
+		
+		}
+		else if (is_category()) {
+			$active_cat = get_the_category_by_ID( get_query_var('cat') );
+			
 		}
 		foreach($cats as $cat) {
-			if ($cat->term_id == $post_cat[0]->term_id) {
+			if ($cat->name == $active_cat ) {
 			echo "<div class =\"activecat tagbutton \">";
 				echo "<a href=\"/category/$cat->slug\">$cat->name</a>";
 			echo "</div>";				
