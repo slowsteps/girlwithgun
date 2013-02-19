@@ -24,14 +24,16 @@
 		echo "<h2 class=\"archiveheader\">";
 		echo get_the_category_by_ID( get_query_var('cat') ) . " games";
 		echo "</h2>";
-		echo '<div class="category_or_tag_description">'.category_description()."</div>";
+		echo '<div class="smalltext category_or_tag_description">'.category_description()."</div>";
 	}
 
 	if (is_tag()) {
 		echo "<h2 class=\"archiveheader\">";
-		echo get_query_var('tag');
+		$slugtag = get_query_var('tag');
+		$nicetag = get_term_by('slug',$slugtag,'post_tag');
+		echo $nicetag->name;
 		echo "</h2>";
-		echo '<div class="category_or_tag_description">'.tag_description()."</div>";
+		echo '<div class="smalltext category_or_tag_description">'.tag_description()."</div>";
 	}
 
 

@@ -32,7 +32,19 @@ _deprecated_file( sprintf( __( 'Theme without %1$s' ), basename(__FILE__) ), '3.
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
+<!--
 <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Short+Stack' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Cherry+Swash' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Kranky' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Margarine' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Flamenco' rel='stylesheet' type='text/css'>
+-->
+<link href='http://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>
+
+
+
 
 <link rel="shortcut icon" href="/wp-content/themes/girlwithgun/sohorses.ico?v=2">
 
@@ -139,8 +151,10 @@ function hidethumbnailTitle(thumb) {
 
 
 	<div id="facebook_like">
-		<h2 class="description"><?php bloginfo('description'); ?></h2>
+
+		<h2 class="description smalltext"><?php bloginfo('description'); ?></h2>
 		<div class="fb-like" data-href="https://www.facebook.com/sohorses" data-layout="button_count" data-show-faces="true" data-font="tahoma" data-width="100"></div>
+
 	</div>
 
 	<div id="category_mainmenu">

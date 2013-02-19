@@ -4,11 +4,16 @@ sohorses.com CSS overrides
 
 
 
-body {
+body, input {
 	background-color: rgb(250,245,240);
-	font:15px 'Merriweather',serif;	
+	font:18px 'Cabin Sketch',serif;	
+	
 }
 
+.smalltext {
+	
+	font: 15px 'Cabin Sketch',sans-serif;
+}
 
 .backgroundcolor {
 	background-color:#b27fb4;	
@@ -95,9 +100,9 @@ h2.archiveheader, h2.archiveheader a:link, h2.archiveheader a:visited {
 }
 
 #searchsubmit {
-	font-size: 14px;
-	font-family: 'Merriweather',serif;
-	color: white;
+	font-size: 18px;
+	/*font-family: 'Merriweather',serif;*/
+	color: floralwhite;
 	background-color: hotpink;
 }
 
