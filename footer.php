@@ -19,7 +19,7 @@
 </div>
 
 
-<div id="footer">
+<div id="footer" class="backgroundcolor">
 
 	<div id="tagcloud">
 

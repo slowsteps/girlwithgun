@@ -118,7 +118,7 @@ function hidethumbnailTitle(thumb) {
 <body <?php body_class(); ?>>
 
 
-<div id="centerdiv">
+<div id="centerdiv" class="backgroundcolor">
 
 
 <div id="header" role="banner">
@@ -128,16 +128,18 @@ function hidethumbnailTitle(thumb) {
 		//echo '<div id="homebutton">Home</div>';
 	}
 	?>
-	<div id="headerimg" onclick="_gaq.push(['_trackEvent', 'logo', 'clicked'])">
-		<h1><?php bloginfo('name'); ?></h1>
-		<div class="description"><?php bloginfo('description'); ?></div>
-	</div>
+	<h1 id="headerimg" title="<?php bloginfo('name'); ?>" alt="<?php bloginfo('name'); ?>">
+			
+	</h1>
 	</a>
 	<div id="searchformbox">
 		<?php get_search_form(); ?>
 	</div>
 
+
+
 	<div id="facebook_like">
+		<h2 class="description"><?php bloginfo('description'); ?></h2>
 		<div class="fb-like" data-href="https://www.facebook.com/sohorses" data-layout="button_count" data-show-faces="true" data-font="tahoma" data-width="100"></div>
 	</div>
 

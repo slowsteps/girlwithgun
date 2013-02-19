@@ -61,10 +61,23 @@
 		echo "<div id=\"categoryandtags\">";
 
 		echo "<div id=\"tag_intro\">More games with: </div>";
-		echo "<div class =\"tagbutton\">";
-			the_category('</div><div class ="tagbutton">'); 
-		echo "</div>";
+		//display category above game if not highlighted in mainmenu
+		$post_cat = get_the_category();
+		$inmainmenu = false;
+		$args = array( 'orderby' => 'count', 'order' => 'DESC', 'number' => '5');
+		$cats = get_categories($args);
+		
+		foreach ($cats as $cat) {
+			if ($cat->name == $post_cat[0]->name) $inmainmenu = true;
+		}
+		if (!inmainmenu) {
+			echo "<div class =\"tagbutton\">";
+				the_category('</div><div class ="tagbutton">'); 
+			echo "</div>";
+		}
+		//end display categoty
 
+		//display the tags
 		$posttags = get_the_tags();
 			if ($posttags) {
 	 			 foreach($posttags as $tag) {
@@ -78,6 +91,8 @@
 	  		}
 		}
 		echo "</div>";
+		//end display tags
+
 
 		wp_reset_postdata();
 		//fetch the swf file that is attached (bound) to the post
