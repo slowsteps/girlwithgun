@@ -148,7 +148,7 @@ function hidethumbnailTitle(thumb) {
 
 		if(!is_home()) {
 			echo "<div class =\"homeicon tagbutton \">";
-				echo "<a href=\"/\">All games</a>";
+				echo "<a href=\"/\">all games</a>";
 			echo "</div>";	
 		}
 
