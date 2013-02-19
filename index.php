@@ -22,7 +22,7 @@
 	}
 	if (is_category()) {
 		echo "<h2 class=\"archiveheader\">";
-		echo get_the_category_by_ID( get_query_var('cat') );
+		echo get_the_category_by_ID( get_query_var('cat') ) . " games";
 		echo "</h2>";
 		echo '<div class="category_or_tag_description">'.category_description()."</div>";
 	}
