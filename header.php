@@ -148,7 +148,7 @@ function hidethumbnailTitle(thumb) {
 
 		if(!is_home()) {
 			echo "<div class =\"homeicon tagbutton \">";
-				echo "<a href=\"/\">Home</a>";
+				echo "<a href=\"/\">All games</a>";
 			echo "</div>";	
 		}
 
@@ -167,12 +167,12 @@ function hidethumbnailTitle(thumb) {
 		foreach($cats as $cat) {
 			if ($cat->name == $active_cat ) {
 			echo "<div class =\"activecat tagbutton \">";
-				echo "<a href=\"/category/$cat->slug\">$cat->name</a>";
+				echo "<a href=\"/category/$cat->slug\">$cat->name games</a>";
 			echo "</div>";				
 			}
 			else {
 			echo "<div class =\"tagbutton\">";
-				echo "<a href=\"/games/category/$cat->slug\">$cat->name</a>";
+				echo "<a href=\"/games/category/$cat->slug\">$cat->name games</a>";
 			echo "</div>";
 			}
 		}
