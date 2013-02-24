@@ -246,10 +246,15 @@ h2.archiveheader, h2.pageheader {
 	opacity: 0.5;
 	font-style: italic;
 	font-size: 14px;
+
 }
 
 #fullmenu .closebutton {
 	float:right;
+}
+
+.arrow {
+	font-size: 11px;
 }
 
 .category_or_tag_description {

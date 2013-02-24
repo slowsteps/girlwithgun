@@ -193,7 +193,8 @@ function hidethumbnailTitle(thumb) {
 
 	?>
 		<!--open up the sliding list of all categories-->
-		<div class ="tagbutton" ><a href="javascript:void(0)" onclick="$('#fullmenu').slideToggle();" >more games...</a></div>
+		<div class ="tagbutton" ><a id="more_games" href="javascript:void(0)" onclick="toggleFullMenu();" >more games <span class="arrow">&#9660;</span></a></div>
+		
 	
 	</div>
 	
@@ -205,14 +206,33 @@ function hidethumbnailTitle(thumb) {
  }
 </style>
 <div id="fullmenu" class="themecolor1">
-	<div class ="closebutton" ><a href="javascript:void(0)" onclick="$('#fullmenu').slideToggle();" >x</a></div>
+
+	
+	<script>
+
+		var fullmenuOpen = false;
+
+		function toggleFullMenu() {
+			$('#fullmenu').slideToggle();
+			if ( fullmenuOpen ) {
+				$('#more_games').html('more games <span class="arrow"> &#9660</span>');
+				fullmenuOpen = false;
+			}
+			else {
+				$('#more_games').html('more games <span class="arrow"> &#9650;</span>');
+				fullmenuOpen = true;
+			}
+		}
+	</script>
+
+
 	<?php
 		$args = array();
 		$cats = get_categories($args);
 		foreach($cats as $cat) {
 			echo "<li>";
 				echo "<a href=\"/games/category/$cat->slug\">$cat->name games <span>$cat->description</span> </a> ";
-
+				//echo "<a href=\"/games/category/$cat->slug\">$cat->name games</a> ";
 				//echo "<span>$cat->description</span>";
 			echo "</li>";
 		}

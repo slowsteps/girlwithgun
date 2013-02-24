@@ -63,14 +63,22 @@
 		echo "<div id=\"tag_intro\">More games with: </div>";
 		//display category above game if not highlighted in mainmenu
 		$post_cat = get_the_category();
-		$inmainmenu = false;
+		$inmainmenu = 0;
 		$args = array( 'orderby' => 'count', 'order' => 'DESC', 'number' => '5');
 		$cats = get_categories($args);
 		
 		foreach ($cats as $cat) {
-			if ($cat->name == $post_cat[0]->name) $inmainmenu = true;
+			//echo $cat->name . " - " .  $post_cat[0]->name . "<br/>";
+			if ($cat->name == $post_cat[0]->name) {
+				$inmainmenu = 1;
+				break;
+
+			}
+			else $inmainmenu = 0;
 		}
-		if (!inmainmenu) {
+		//echo "----" . $inmainmenu . "_______";
+
+		if ($inmainmenu == 0) {
 			echo "<div class =\"tagbutton\">";
 				the_category('</div><div class ="tagbutton">'); 
 			echo "</div>";
