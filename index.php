@@ -128,6 +128,8 @@
 
 		//RENDERING HOME AND PAGING
 
+		echo "<div id=\"thumbgrid\">";
+
 		$start = 0 + $paged*$maxposts;
 		$end = $start + $maxposts;
 
@@ -164,6 +166,6 @@
 
 ?>
 
-
+</div>
 
  <?php get_footer(); ?>

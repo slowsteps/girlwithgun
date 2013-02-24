@@ -154,7 +154,7 @@ function hidethumbnailTitle(thumb) {
 
 		<h2 class="description smalltext"><?php bloginfo('description'); ?></h2>
 		<div class="fb-like" data-href="https://www.facebook.com/sohorses" data-layout="button_count" data-show-faces="true" data-font="tahoma" data-width="100"></div>
-
+		<!--<div class="description smalltext">follow us on Facebook!</div>-->
 	</div>
 
 	<div id="category_mainmenu">
@@ -192,7 +192,24 @@ function hidethumbnailTitle(thumb) {
 		}
 
 	?>
+		<!--open up the sliding list of all categories-->
+		<div class ="tagbutton" ><a href="javascript:void(0)" onclick="$('#fullmenu').slideToggle();" >more games...</a></div>
+	
 	</div>
+	
 
+</div>
+<div id="fullmenu" class="themecolor1">
+	<div class ="closebutton" ><a href="javascript:void(0)" onclick="$('#fullmenu').slideToggle();" >x</a></div>
+	<?php
+		$args = array();
+		$cats = get_categories($args);
+		foreach($cats as $cat) {
+			echo "<li>";
+				echo "<a href=\"/games/category/$cat->slug\">$cat->name games <span>$cat->description</span> </a> ";
+				//echo "<span>$cat->description</span>";
+			echo "</li>";
+		}
+	?>
 </div>
 

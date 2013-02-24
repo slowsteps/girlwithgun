@@ -40,12 +40,21 @@ body {
 	background-color:#596483;	
 }
 
+.themecolor1 {
+	background-color:hotpink;
+}
+
+.themecolor2 {
+	color:floralwhite;
+}
+
+
 #preroll {
 	width:810px;
 	height:530px;
 	background-color: floralwhite;
 	position: absolute;
-	top:195px;
+	top:200px;
 	padding-top: 100px;
 	border-radius: 5px;
 	
@@ -208,6 +217,38 @@ h2.archiveheader, h2.pageheader {
 	width:100%;
 	color:floralwhite;
 	
+}
+
+#fullmenu {
+	width:96%;
+	display: none;
+	clear:both;
+	padding:10px;
+	margin-bottom: 30px;
+	border-radius: 5px;
+}
+
+#fullmenu a {
+	color:floralwhite;
+}
+
+#fullmenu li {
+	color:floralwhite;
+}
+
+#fullmenu a:hover {
+	background-color:deeppink;
+}
+
+#fullmenu span {
+	color:floralwhite;
+	opacity: 0.5;
+	font-style: italic;
+	font-size: 14px;
+}
+
+#fullmenu .closebutton {
+	float:right;
 }
 
 .category_or_tag_description {
@@ -381,13 +422,15 @@ h2.archiveheader, h2.pageheader {
 #facebook_like {
 	float:left;
 	
-	margin-top:18px;
+	margin-top:6px;
+
+	margin-bottom:18px;
 	margin-left:50px;
 	text-align: center;
 }
 
 .fb-like {
-
+	margin-bottom: 10px;
 	margin-left: 5px;
 	border-radius: 5px;
 }
