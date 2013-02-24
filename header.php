@@ -199,6 +199,11 @@ function hidethumbnailTitle(thumb) {
 	
 
 </div>
+<style>
+ #fullmenu {
+ 	display:none;
+ }
+</style>
 <div id="fullmenu" class="themecolor1">
 	<div class ="closebutton" ><a href="javascript:void(0)" onclick="$('#fullmenu').slideToggle();" >x</a></div>
 	<?php
@@ -207,6 +212,7 @@ function hidethumbnailTitle(thumb) {
 		foreach($cats as $cat) {
 			echo "<li>";
 				echo "<a href=\"/games/category/$cat->slug\">$cat->name games <span>$cat->description</span> </a> ";
+
 				//echo "<span>$cat->description</span>";
 			echo "</li>";
 		}

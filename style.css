@@ -221,10 +221,9 @@ h2.archiveheader, h2.pageheader {
 
 #fullmenu {
 	width:96%;
-	display: none;
 	clear:both;
 	padding:10px;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 	border-radius: 5px;
 }
 
