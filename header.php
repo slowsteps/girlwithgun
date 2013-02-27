@@ -115,7 +115,7 @@ function hidethumbnailTitle(thumb) {
 
 </script>
 
-<!--FACEBOOK -->
+<!--FACEBOOK
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -124,7 +124,7 @@ function hidethumbnailTitle(thumb) {
   js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=115396571974411";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<!--END FACEBOOK-->
+END FACEBOOK-->
 
 </head>
 <body <?php body_class(); ?>>
@@ -193,17 +193,21 @@ function hidethumbnailTitle(thumb) {
 
 	?>
 		<!--open up the sliding list of all categories-->
-		<div class ="tagbutton" ><a id="more_games" href="javascript:void(0)" onclick="toggleFullMenu();" >more games <span class="arrow">&#9660;</span></a></div>
+		<div class ="tagbutton" ><a id="more_games" href="javascript:void(0)" onclick="toggleFullMenu();" >more games <span class="arrow">&#9660;</span></a>
+		<div id="more_games_extender"></div>
+		</div>
 		
-	
+		
 	</div>
 	
 
 </div>
 <style>
- #fullmenu {
+ #fullmenu, #more_games_extender {
+ 	
  	display:none;
  }
+
 </style>
 <div id="fullmenu" class="themecolor1">
 
@@ -216,13 +220,20 @@ function hidethumbnailTitle(thumb) {
 			$('#fullmenu').slideToggle();
 			if ( fullmenuOpen ) {
 				$('#more_games').html('more games <span class="arrow"> &#9660</span>');
+				$('#more_games_extender').hide();
 				fullmenuOpen = false;
 			}
 			else {
 				$('#more_games').html('more games <span class="arrow"> &#9650;</span>');
+				$('#more_games_extender').show();
 				fullmenuOpen = true;
 			}
 		}
+
+		function onMenuClosed() {
+			alert("close");
+		}
+
 	</script>
 
 

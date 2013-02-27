@@ -231,6 +231,17 @@ h2.archiveheader, h2.pageheader {
 	color:floralwhite;
 }
 
+#more_games {
+	position: relative;
+}
+
+#more_games_extender {
+	position: absolute;
+	height:30px;
+	width: 120px;
+	background-color: hotpink;
+}
+
 #fullmenu li {
 	color:floralwhite;
 	text-indent: -20px;
