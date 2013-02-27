@@ -115,7 +115,7 @@ function hidethumbnailTitle(thumb) {
 
 </script>
 
-<!--FACEBOOK
+<!--FACEBOOK -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -124,7 +124,7 @@ function hidethumbnailTitle(thumb) {
   js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=115396571974411";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-END FACEBOOK-->
+<!--END FACEBOOK-->
 
 </head>
 <body <?php body_class(); ?>>
