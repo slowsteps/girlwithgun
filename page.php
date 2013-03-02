@@ -5,7 +5,7 @@ the_post();
 
 <style>
 #centerdiv {
-	width: 910px;
+	width:1000px;
 	padding-right:10px;
 }
 </style>

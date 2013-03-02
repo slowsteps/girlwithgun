@@ -36,6 +36,9 @@
 		echo '<div class="smalltext category_or_tag_description">'.tag_description()."</div>";
 	}
 
+	if (is_page()) {
+		echo "PAGE";
+	}
 
 
 	//render a grid of thumbnails.

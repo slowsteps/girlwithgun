@@ -36,7 +36,7 @@
 		</div>
 		
 		<a href="/">Home</a> |  
-		<a href="/about">about <?php echo get_bloginfo('name');?></a>
+		<a href="/games/about">about <?php echo get_bloginfo('name');?></a>
 		 
 
 		<?php 
