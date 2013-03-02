@@ -178,10 +178,11 @@ function hidethumbnailTitle(thumb) {
 			$active_cat = get_the_category_by_ID( get_query_var('cat') );
 			
 		}
+		//MAIN MENU
 		foreach($cats as $cat) {
 			if ($cat->name == $active_cat ) {
 			echo "<div class =\"activecat tagbutton \">";
-				echo "<a href=\"/category/$cat->slug\">$cat->name games</a>";
+				echo "<a href=\"/games/category/$cat->slug\">$cat->name games</a>";
 			echo "</div>";				
 			}
 			else {
