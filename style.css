@@ -22,6 +22,10 @@ body {
 	font:15px arial,sans-serif;	
 }
 
+.smalltext {
+	font: 15px sans-serif;
+}
+
 #centerdiv {
 	margin: auto;
 	margin-top: 10px;
