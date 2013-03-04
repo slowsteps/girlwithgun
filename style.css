@@ -39,13 +39,19 @@ body {
 	position: relative;
 }
 
+#thumbgrid {
+
+	height:15px;
+	clear:both;
+}
+
 /*theme colors*/
 .backgroundcolor {
 	background-color:#596483;	
 }
 
 .themecolor1 {
-	background-color:hotpink;
+	background-color:#25b516;
 }
 
 .themecolor2 {
@@ -216,7 +222,7 @@ h2.archiveheader, h2.pageheader {
 #category_mainmenu {
 	float:left;
 	margin-top:10px;
-	margin-bottom:10px;
+	margin-bottom:-5px;
 	margin-left:-5px;
 	width:100%;
 	color:floralwhite;
@@ -227,7 +233,7 @@ h2.archiveheader, h2.pageheader {
 	width:96%;
 	clear:both;
 	padding:10px;
-	margin-bottom: 15px;
+	margin-bottom: 0px;
 	border-radius: 5px;
 }
 
@@ -239,11 +245,8 @@ h2.archiveheader, h2.pageheader {
 	position: relative;
 }
 
-#more_games_extender {
-	position: absolute;
-	height:30px;
-	width: 120px;
-	background-color: hotpink;
+#more_games.more_games_open {
+	height:26px;
 }
 
 #fullmenu li {
@@ -262,10 +265,6 @@ h2.archiveheader, h2.pageheader {
 	font-style: italic;
 	font-size: 14px;
 
-}
-
-#fullmenu .closebutton {
-	float:right;
 }
 
 .arrow {
@@ -368,13 +367,10 @@ h2.archiveheader, h2.pageheader {
 	background-color: #0ee127;
 }
 
-.description {
-
- 
- margin-bottom:10px;
- color: floralwhite;
-
- 
+#description {
+ 	margin-bottom:10px;
+ 	color: floralwhite;
+ 	max-width: 200px;
 }
 
 
@@ -418,7 +414,7 @@ h2.archiveheader, h2.pageheader {
 
 #s {
 	height:30px;
-	width: 400px;
+	width: 350px;
 	border-radius:5px;
 	border: 2px solid #25b516;
 	padding: 4px;

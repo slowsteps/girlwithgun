@@ -4,6 +4,7 @@
  
  <?php get_header(); ?>
 
+<div id="thumbgrid"></div>
  
  <?php 
 
@@ -131,7 +132,9 @@
 
 		//RENDERING HOME AND PAGING
 
-		echo "<div id=\"thumbgrid\">";
+		
+
+
 
 		$start = 0 + $paged*$maxposts;
 		$end = $start + $maxposts;
@@ -148,6 +151,7 @@
 			}
 		}
 		wp_reset_postdata();
+		
 
 		echo '<div id="pager">';
 

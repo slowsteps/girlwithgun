@@ -115,16 +115,14 @@ function hidethumbnailTitle(thumb) {
 
 </script>
 
-<!--FACEBOOK -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=115396571974411";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<!--END FACEBOOK-->
+
+<?php 
+	//CURRENTLY ONLY FACEBOOK LIKE FOR SOHORSES
+	if ( strtolower(get_bloginfo('name')) == "sohorses" ) include('facebook.html');
+?>
+
+
+
 
 </head>
 <body <?php body_class(); ?>>
@@ -152,7 +150,7 @@ function hidethumbnailTitle(thumb) {
 
 	<div id="facebook_like">
 
-		<h2 class="description smalltext"><?php bloginfo('description'); ?></h2>
+		<h2 id="description" class="smalltext"><?php bloginfo('description'); ?></h2>
 		<div class="fb-like" data-href="https://www.facebook.com/sohorses" data-layout="button_count" data-show-faces="true" data-font="tahoma" data-width="100"></div>
 		<!--<div class="description smalltext">follow us on Facebook!</div>-->
 	</div>
@@ -195,7 +193,7 @@ function hidethumbnailTitle(thumb) {
 	?>
 		<!--open up the sliding list of all categories-->
 		<div class ="tagbutton" ><a id="more_games" href="javascript:void(0)" onclick="toggleFullMenu();" >more games <span class="arrow">&#9660;</span></a>
-		<div id="more_games_extender"></div>
+		
 		</div>
 		
 		
@@ -221,12 +219,12 @@ function hidethumbnailTitle(thumb) {
 			$('#fullmenu').slideToggle();
 			if ( fullmenuOpen ) {
 				$('#more_games').html('more games <span class="arrow"> &#9660</span>');
-				$('#more_games_extender').hide();
+				$('#more_games').toggleClass("more_games_open");
 				fullmenuOpen = false;
 			}
 			else {
 				$('#more_games').html('more games <span class="arrow"> &#9650;</span>');
-				$('#more_games_extender').show();
+				$('#more_games').toggleClass("more_games_open");
 				fullmenuOpen = true;
 			}
 		}
