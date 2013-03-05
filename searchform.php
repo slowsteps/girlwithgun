@@ -74,7 +74,10 @@
 		//echo("<br> - " . $cat->name . " - "  .$cat->term_id . " with " . count($extragames)) . " games";
 		foreach ($extragames as $post) {
 			$post->tag = $cat->name; 
-			array_push($gameslistbytags, $post);
+			//echo "<br>-".$post->post_name ."-". $cat->name . " search: ". stristr($post->post_name,$cat->name);
+			//echo stristr($post->post_name,$cat->name);
+			if (stristr($post->post_name,$cat->name)=="") array_push($gameslistbytags, $post);
+			else echo $post->post_name;
 		}		
 	}
 
