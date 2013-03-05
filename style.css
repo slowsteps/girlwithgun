@@ -40,7 +40,7 @@ body {
 }
 
 #thumbgrid {
-
+	background-color: grey;
 	height:15px;
 	clear:both;
 }

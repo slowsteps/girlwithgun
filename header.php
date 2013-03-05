@@ -208,6 +208,7 @@ function hidethumbnailTitle(thumb) {
  }
 
 </style>
+
 <div id="fullmenu" class="themecolor1">
 
 	
@@ -248,4 +249,5 @@ function hidethumbnailTitle(thumb) {
 		}
 	?>
 </div>
+<div id="thumbgrid"></div>
 
