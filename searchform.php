@@ -77,7 +77,7 @@
 			//echo "<br>-".$post->post_name ."-". $cat->name . " search: ". stristr($post->post_name,$cat->name);
 			//echo stristr($post->post_name,$cat->name);
 			if (stristr($post->post_name,$cat->name)=="") array_push($gameslistbytags, $post);
-			else echo $post->post_name;
+			//else echo $post->post_name;
 		}		
 	}
 
