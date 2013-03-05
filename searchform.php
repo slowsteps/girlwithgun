@@ -11,7 +11,7 @@
 <style>
 
 .ui-autocomplete {
-	font-size: 18px;
+	font-size: 16px;
 	padding:10px;
 	
 	border: 3px solid hotpink;
@@ -20,7 +20,7 @@
 
 .ui-menu-item {
 	background-image: none;	
-	height: 80px;
+	height: 50px;
 }
 
 .ui-widget-content .ui-state-focus
@@ -30,7 +30,7 @@
 	border-radius: 0px;
 	border: 1px solid transparent;
     color: floralwhite;
-    height: 60px;
+    height: 40px;
     border-radius: 2px;
    
 }
@@ -77,7 +77,7 @@
 			//echo "<br>-".$post->post_name ."-". $cat->name . " search: ". stristr($post->post_name,$cat->name);
 			//echo stristr($post->post_name,$cat->name);
 			if (stristr($post->post_name,$cat->name)=="") array_push($gameslistbytags, $post);
-			//else echo $post->post_name;
+			//	else echo $post->post_name;
 		}		
 	}
 
@@ -101,7 +101,7 @@ var games = [];
 		
 		$thumburl = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID))[0];
 		$attr = array('class' => 'autocompletethumb');
-		$thumb = get_the_post_thumbnail($post->ID,array(80,60),$attr);
+		$thumb = get_the_post_thumbnail($post->ID,array(60,40),$attr);
 		//replace doublequotes, otherwise the object chokes
 		$thumb = str_replace('"', "'", $thumb);
 		$lowtitle = strtolower($post->post_title);

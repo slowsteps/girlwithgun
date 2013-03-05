@@ -40,7 +40,7 @@ body {
 }
 
 #thumbgrid {
-	
+
 	height:15px;
 	clear:both;
 }
@@ -580,44 +580,5 @@ div.aligncenter {
    float: right;
   margin-left:7px;
 }
-/*
-	required styles
-	Please see options/css.php for real definition of the styles
-*/
-.wp-caption,
-.wp-caption-text,
-.gallery-caption,
-.bypostauthor,
-.sticky
-{}
 
-#commentform .comment-form-comment label
-{
-	display:block;
-}
-.form-allowed-tags
-{
-	padding: 0 20px 0 0;
-}
-#cyan-sidebar
-{
-	overflow:hidden;
-}
-.archive-meta {
-	padding: 5px 10px;
-}
-.post a.special
-{
-	color:#ee0000;
-	text-decoration:none;
-}
-.post a.special:visited
-{
-	color:#ee0000;
-	text-decoration:none;
-}
-.post a.special:hover
-{
-	color:#000000;
-	text-decoration:underline;
-}
+
