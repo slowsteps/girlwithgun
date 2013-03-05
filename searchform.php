@@ -44,29 +44,41 @@
 </style>
 
 <?php
-
+	//GET ALL THE GAME-TAG COMBINATIONS
+	
 	$gameslistbytags = array();
 
-	$alltags = get_tags();
-	foreach ($alltags as $tag) {
 
-		//echo $tag->name . " - ";
-		//var_dump($tag);
-		
+	$taxonomies = array( 'post_tag');
+	$alltags = get_terms($taxonomies);
+	
+	
+	foreach ($alltags as $tag) {
 		$args = array('orderby' => 'post_views_count', 'order' => 'desc','tag'=>$tag->slug,'numberposts' => 200);	
-		$extragames = get_posts( $args );	
+		$extragames = get_posts($args);	
 		
 		foreach ($extragames as $post) {
-			$post->tag = $tag->name;
+			$post->tag = $tag->name; 
 			array_push($gameslistbytags, $post);
-		}
-
-		
+		}		
 	}
 	
-	//var_dump($gameslistbytags)
+	//$taxonomies = array( 'category');
+	//$allcats = get_terms($taxonomies);
+	$allcats = get_categories();
+	
+	foreach ($allcats as $cat) {
+		
+		$args = array('orderby' => 'post_views_count', 'order' => 'desc','category'=>$cat->term_id,'numberposts' => 200);	
+		$extragames = get_posts($args);	
+		//echo("<br> - " . $cat->name . " - "  .$cat->term_id . " with " . count($extragames)) . " games";
+		foreach ($extragames as $post) {
+			$post->tag = $cat->name; 
+			array_push($gameslistbytags, $post);
+		}		
+	}
 
-
+	
 ?>
 
 
@@ -82,9 +94,6 @@ var games = [];
 	//get all tags. get all games per tag. set tag as label. set title as value
 
 
-
-
-	//foreach ($gameslist as $post) {
 	foreach ($gameslistbytags as $post) {
 		
 		$thumburl = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID))[0];
@@ -96,8 +105,9 @@ var games = [];
 		$tag = $post->tag;
 		//url to open
 		$name = $post->post_name;
-		//echo "var gamedata = {label: \"$lowtitle\", value: \"$lowtitle\", thumb:\"$thumb\", thumburl:\"$thumburl\",name:\"$name\"};";
-		echo "var gamedata = {label: \"$tag\", value: \"$tag\", thumb:\"$thumb\", thumburl:\"$thumburl\",name:\"$name\"};";
+		$nicename = $post->post_title;
+		
+		echo "var gamedata = {label: \"$tag\", value: \"$tag\", thumb:\"$thumb\", thumburl:\"$thumburl\",name:\"$name\",nicename:\"$nicename\"};";
 		echo "\ngames.push(gamedata);\n";
 	}
 	
@@ -107,14 +117,22 @@ var games = [];
 
 <script>
 
-	
+	//customise autocomplete list with thumbs
 
       $.ui.autocomplete.prototype._renderItem = function( ul, item) {
           var re = new RegExp("^" + this.term) ;
           var t = item.label.replace(re,"<span style='font-weight:bold;'>" + this.term +  "</span>");
+          
+          if ( item.value.toLowerCase() == item.nicename.toLowerCase() ) {
           return $( "<li></li>" ).data( "item.autocomplete", item )
-              .append( "<a>" + item.thumb + item.value + "</a>" )
+              .append( "<a>" + item.thumb + item.nicename + "</a>" )
               .appendTo( ul );
+          }
+		  else {
+          return $( "<li></li>" ).data( "item.autocomplete", item )
+              .append( "<a>" + item.thumb + item.nicename + " (" + item.value + ")</a>" )
+              .appendTo( ul );
+          }
       };
   
 	
@@ -131,13 +149,6 @@ var games = [];
 
 
 
-<script>
-
-	//var gamenames = <?php echo json_encode($gamenames ); ?>;
-	//var obj = {source: gamenames};	
-	//$( "#s" ).autocomplete(obj);
-
-</script>
 
 
 
