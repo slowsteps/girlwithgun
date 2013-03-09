@@ -64,7 +64,7 @@ body {
 	height:530px;
 	background-color: floralwhite;
 	position: absolute;
-	top:220px;
+	top:210px;
 	padding-top: 100px;
 	border-radius: 5px;
 	
@@ -124,6 +124,7 @@ Three colum layout for game pages and general pages
 	margin-right: 20px;
 	border-radius: 15px;
 	width:80%;
+	min-height:600px;
 	
 }
 
