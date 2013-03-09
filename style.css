@@ -64,7 +64,7 @@ body {
 	height:530px;
 	background-color: floralwhite;
 	position: absolute;
-	top:200px;
+	top:220px;
 	padding-top: 100px;
 	border-radius: 5px;
 	
@@ -138,8 +138,6 @@ Three colum layout for game pages and general pages
 
 /* this div will be removed by swfobject */
 #flashgame {
-	color:orange;
-	background-color:orange;
 }
 
 /* game summary */

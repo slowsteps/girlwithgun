@@ -107,7 +107,7 @@
 	    $args = array( 'post_type' => 'attachment', 'post_parent' => $post->ID,  'post_mime_type' => 'application/x-shockwave-flash', 'numberposts' => 1  ); 
     	$attachments = get_posts($args);
 		if ( count($attachments) > 0 ) $attachment = $attachments[0];
-		else echo "no attachments found";
+		//else echo "no attachments found";
 	?>
 	
 	<script type="text/javascript">	
@@ -146,7 +146,7 @@
 	
 	<div id="centergame">
 		<div id="flashgame">
-      		Flash game not loaded - you are offline, or the media attachement could not be found.
+      		<!--Flash game not loaded - you are offline, or the media attachement could not be found.-->
     	</div>
     	
     	<div id="preroll">
