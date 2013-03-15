@@ -49,6 +49,7 @@
 	<a href="/"><div id="backbutton">home</div></a>
 	-->
 
+
 	<?php 
 		//track this gameplay in a meta filed posts_views_count
 		setPostViews($post->ID);
@@ -145,6 +146,22 @@
 
 	
 	<div id="centergame">
+
+
+		<?php
+
+			include 'Mobile_Detect.php';
+			$detect = new Mobile_Detect();
+
+
+			if ($detect->isMobile()) {
+				echo "<div class =\"tagbutton\">";
+			    echo "<a href=\"http://www.sohorses.com/games/category/ipad-iphone/\">Hello Mobile visitor: check out our iphone and ipad games </a>";
+				echo "</div>";
+			}
+
+		?>
+
 		<div id="flashgame">
       		<!--Flash game not loaded - you are offline, or the media attachement could not be found.-->
     	</div>
