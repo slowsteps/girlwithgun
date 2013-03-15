@@ -141,6 +141,11 @@ Three colum layout for game pages and general pages
 #flashgame {
 }
 
+.mobile_alert {
+	clear:both;
+	float:left;
+}
+
 /* game summary */
 
 #gamesummary {

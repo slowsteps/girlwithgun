@@ -155,9 +155,13 @@
 
 
 			if ($detect->isMobile()) {
-				echo "<div class =\"tagbutton\">";
-			    echo "<a href=\"http://www.sohorses.com/games/category/ipad-iphone/\">Hello Mobile visitor: check out our iphone and ipad games </a>";
+				echo "<div class =\"mobile_alert\" >";
+					echo "Hello mobile user, check out our ";
 				echo "</div>";
+				echo "<div class =\"tagbutton\" >";
+				    echo "<a href=\"http://www.sohorses.com/games/category/ipad-iphone/\"> iphone and ipad games </a>";
+				echo "</div>";
+				
 			}
 
 		?>
