@@ -356,8 +356,8 @@ h2.archiveheader, h2.pageheader {
 #headerimg {
 	width:250px;
 	float: left;
-	background-color: #25b516;
-	background-image: url('logo.png');
+	background-position: 50% 50%;
+	background-image: url('girlwithgunlogo.png');
 	border-radius: 8px;
 	margin-top:0px;
 	padding: 6px;

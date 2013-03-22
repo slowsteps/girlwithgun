@@ -151,7 +151,7 @@ function hidethumbnailTitle(thumb) {
 	<div id="facebook_like">
 
 		<h2 id="description" class="smalltext"><?php bloginfo('description'); ?></h2>
-		<div class="fb-like" data-href="https://www.facebook.com/sohorses" data-layout="button_count" data-show-faces="true" data-font="tahoma" data-width="100"></div>
+		<div class="fb-like" data-href="https://www.facebook.com/sohorses" data-layout="button_count" data-show-faces="false" data-font="tahoma" data-width="100"></div>
 		<!--<div class="description smalltext">follow us on Facebook!</div>-->
 	</div>
 
