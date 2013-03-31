@@ -40,7 +40,7 @@
 		 
 
 		<?php 
-			if ( strtolower(get_bloginfo('name')) != "sohorses") {
+			if ( strtolower(get_bloginfo('name')) == "girlwithgun") {
 				echo " | <a href=\"http://www.sohorses.com\">Play cool horse games for girls on soHorses.com</a>";
 				echo " | <a href=\"http://www.girlwithgun.com/quadgamesvault\">quadgames vault</a>";
 			}
