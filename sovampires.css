@@ -27,6 +27,10 @@ a:link, a:hover, a:visited {
 	background-color:black;
 }
 
+#skiplink  {
+	background-color: red;
+}
+
 /*
 Single post
 */
@@ -55,7 +59,7 @@ h2.archiveheader, h2.archiveheader a:link, h2.archiveheader a:visited {
 /*category and tag buttons*/
 
 #tag_intro {
-	color:hotpink;
+	color:black;
 }
 
 .tagbutton {
@@ -63,6 +67,9 @@ h2.archiveheader, h2.archiveheader a:link, h2.archiveheader a:visited {
 
 }
 
+.activecat {
+	background-color: grey !important;	
+}
 
 .tagbutton:hover {
 	background-color: red;
