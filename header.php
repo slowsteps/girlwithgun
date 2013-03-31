@@ -57,6 +57,7 @@ _deprecated_file( sprintf( __( 'Theme without %1$s' ), basename(__FILE__) ), '3.
 
 //add portal specific CSS overrides  
 if ( strtolower(get_bloginfo('name')) == "sohorses" ) echo '<link rel="stylesheet" href="/wp-content/themes/girlwithgun/sohorses.css" type="text/css" media="screen" />';
+if ( strtolower(get_bloginfo('name')) == "sovampires" ) echo '<link rel="stylesheet" href="/wp-content/themes/girlwithgun/sovampires.css" type="text/css" media="screen" />';
 
 ?>
 
