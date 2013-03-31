@@ -59,13 +59,13 @@ h2.archiveheader, h2.archiveheader a:link, h2.archiveheader a:visited {
 }
 
 .tagbutton {
-	background-color: hotpink;
+	background-color: red;
 
 }
 
 
 .tagbutton:hover {
-	background-color: deeppink;
+	background-color: red;
 }
 
 .tagbutton a {
@@ -98,7 +98,7 @@ h2.archiveheader, h2.archiveheader a:link, h2.archiveheader a:visited {
 
 
 #s {
-	border: 2px solid hotpink;
+	border: 2px solid red;
 	background-color:floralwhite;
 }
 
@@ -106,7 +106,7 @@ h2.archiveheader, h2.archiveheader a:link, h2.archiveheader a:visited {
 	font-size: 18px;
 	/*font-family: 'Merriweather',serif;*/
 	color: floralwhite;
-	background-color: hotpink;
+	background-color: red;
 }
 
 #searchsubmit:hover {
@@ -124,7 +124,8 @@ h2.archiveheader, h2.archiveheader a:link, h2.archiveheader a:visited {
 
 
 .post {
-	background-color: floralwhite;
+	background-color: red;
+	box-shadow: 0px 0px 20px black;
 }
 
 .post:hover {
