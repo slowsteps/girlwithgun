@@ -32,15 +32,7 @@ _deprecated_file( sprintf( __( 'Theme without %1$s' ), basename(__FILE__) ), '3.
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
-<!--
-<link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Short+Stack' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Cherry+Swash' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Kranky' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Margarine' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Flamenco' rel='stylesheet' type='text/css'>
--->
+
 <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>
 
 
@@ -122,7 +114,7 @@ function hidethumbnailTitle(thumb) {
 
 <?php 
 	//CURRENTLY ONLY FACEBOOK LIKE FOR SOHORSES
-	if ( strtolower(get_bloginfo('name')) == "sohorses" ) include('facebook.html');
+	//if ( strtolower(get_bloginfo('name')) == "sohorses" ) include('facebook.html');
 ?>
 
 
@@ -146,18 +138,24 @@ function hidethumbnailTitle(thumb) {
 			
 	</h1>
 	</a>
+
+	<h2 id="description" class="smalltext"><?php bloginfo('description'); ?></h2>
+
 	<div id="searchformbox">
 		<?php get_search_form(); ?>
 	</div>
 
 
 
+
+	
 	<div id="facebook_like">
 
-		<h2 id="description" class="smalltext"><?php bloginfo('description'); ?></h2>
-		<div class="fb-like" data-href="https://www.facebook.com/sohorses" data-layout="button_count" data-show-faces="false" data-font="tahoma" data-width="100"></div>
+		<!--<h2 id="description" class="smalltext"><?php bloginfo('description'); ?></h2>-->
+		<!--<div class="fb-like" data-href="https://www.facebook.com/sohorses" data-layout="button_count" data-show-faces="false" data-font="tahoma" data-width="100"></div>-->
 		<!--<div class="description smalltext">follow us on Facebook!</div>-->
 	</div>
+	
 
 	<div id="category_mainmenu">
 	<?php
@@ -253,5 +251,22 @@ function hidethumbnailTitle(thumb) {
 		}
 	?>
 </div>
+
+	<div id="google_ad_small">
+		
+			<script type="text/javascript"><!--
+			google_ad_client = "ca-pub-4715818108855319";
+			/* Half Banner */
+			google_ad_slot = "5249959070";
+			google_ad_width = 234;
+			google_ad_height = 60;
+			//-->
+			</script>
+			<script type="text/javascript"
+			src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+			</script>
+		
+	</div>	
+
 <div id="thumbgrid"></div>
 

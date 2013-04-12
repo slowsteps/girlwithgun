@@ -5,6 +5,7 @@
 <div id="relatedcol">
 	<div id="related">
 		
+
 		<a href="\">
 			<?php 
 			//if(!is_home()) echo '<div id="homebutton">Home</div>';
@@ -41,6 +42,10 @@
 	
 	</div>
 	
+
+
+
+
 </div>
 
 <div id="midcol">
