@@ -458,6 +458,9 @@ h2.archiveheader, h2.pageheader {
 	z-index: 1
 }
 
+#leaderboard {
+	text-align: center;
+}
 
 
 .fb-like {
