@@ -69,6 +69,10 @@ if ( strtolower(get_bloginfo('name')) == "sovampires" ) echo '<link rel="stylesh
 
 <script type="text/javascript">
 
+	//this line is needed to couple adsense to analytics
+	window.google_analytics_uacct = "<?php echo $trackingid;?>";
+
+
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', '<?php echo $trackingid;?>']);
   _gaq.push(['_trackPageview']);
