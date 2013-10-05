@@ -1,0 +1,185 @@
+/*   
+sohorses.com CSS overrides
+*/
+
+
+
+body, input {
+	background-color: rgb(250,245,240);
+	font:18px 'Cabin Sketch',serif;	
+	
+}
+
+.smalltext {
+	
+	font: 15px 'Cabin Sketch',sans-serif;
+}
+
+.backgroundcolor {
+	background-color:#b27fb4;	
+}
+
+a:link, a:hover, a:visited {
+	color: black;
+}
+
+.themecolor1 {
+	background-color:hotpink;
+}
+
+/*
+Single post
+*/
+
+#midcol {
+	background-color: floralwhite;
+}
+
+#centergame {
+	border: solid #2D2D2D 0px;
+	background-color: 	floralwhite;
+}
+
+h2.singlepostheader {
+	color:#441111;
+}
+
+h2.archiveheader, h2.archiveheader a:link, h2.archiveheader a:visited {
+	color:floralwhite;
+}
+
+.category_or_tag_description {
+	color:floralwhite;
+}
+
+/*category and tag buttons*/
+
+#tag_intro {
+	color:hotpink;
+}
+
+.tagbutton {
+	background-color: hotpink;
+
+}
+
+
+.tagbutton:hover {
+	background-color: deeppink;
+}
+
+.tagbutton a {
+	color:white;
+}
+
+
+.activecat {
+	background-color: deeppink !important;
+}
+
+#backbutton {
+	color:floralwhite;
+ 	background-image: url('backbuttongirlwithgun.png');
+ 	padding-left: 13px;
+ 	line-height: 29px;
+}
+
+#backbutton:hover {
+	background-image: url('backbuttongirlwithgunhover.png');
+}
+
+
+#skiplink  {
+	background-color: deeppink;
+}
+
+#skiplink:hover {
+	background-color: hotpink;
+}
+
+#skiplink a {
+	color:floralwhite;
+}
+
+
+/*header and footer*/
+
+#headerimg {
+	background-color: transparent;
+	background-image: url('sobakinglogo.png');
+}
+
+#headerimg:hover {
+	background-color: hotpink;
+}
+
+
+#s {
+	border: 2px solid hotpink;
+	background-color:floralwhite;
+}
+
+#searchsubmit {
+	font-size: 18px;
+	/*font-family: 'Merriweather',serif;*/
+	color: floralwhite;
+	background-color: hotpink;
+}
+
+#searchsubmit:hover {
+	background-color: deeppink;
+}
+
+#preroll {
+
+	top:212px;
+	
+}
+
+
+#footer {
+	color:floralwhite;
+}
+
+/*
+	POST
+*/
+
+
+.post {
+	background-color: floralwhite;
+}
+
+.post:hover {
+	background-color: hotpink;
+	box-shadow: 0px 0px 20px hotpink;
+}
+
+.glow {
+	box-shadow: 0px 0px 20px hotpink;
+}
+
+
+#pager span.selected {
+	color: hotpink;
+	background-color: hotpink;
+}
+
+.newgamelabel {
+	position: absolute;
+	background-color: transparent;
+	background-image: url('rosettebig.png');
+	
+	background-position: right top;
+	color: transparent;
+	top: -10px;
+	right: -16px;
+	width: 100%;
+	height:100px;
+}
+
+
+
+
+
+
