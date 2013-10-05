@@ -63,7 +63,9 @@ if ( strtolower(get_bloginfo('name')) == "sobaking" ) echo '<link rel="styleshee
 	if (strtolower(get_bloginfo('name')) == "sohorses") $trackingid = "UA-1140834-4";
 	else if (strtolower(get_bloginfo('name')) == "girlwithgun") $trackingid = "UA-1140834-1";
 	else if (strtolower(get_bloginfo('name')) == "sovampires") $trackingid = "UA-1140834-6";
+	else if (strtolower(get_bloginfo('name')) == "sobaking") $trackingid = "UA-1140834-7";	
 	else $trackingid = "UA-1140834-1";
+
 
 
 ?>
